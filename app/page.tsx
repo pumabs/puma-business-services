@@ -163,49 +163,53 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About teaser */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
-        <div className="bg-brand-navy rounded-2xl px-8 py-14 grid gap-8 md:grid-cols-2 items-center">
-          <div>
-            <p className="text-brand-gold font-semibold uppercase tracking-wide text-sm">
-              About Us
-            </p>
-            <h2 className="text-3xl font-bold text-white mt-2">
-              Real Accountants. Real Relationships.
-            </h2>
-            <p className="mt-4 text-gray-300 leading-relaxed">
-              Puma Business Services was built on the belief that every
-              business deserves clear, reliable financial support, whether
-              you&apos;re a sole trader just starting out or an established
-              limited company looking for more from your accountant.
-            </p>
-            <Link
-              href="/about"
-              className="inline-block mt-6 bg-brand-red hover:bg-brand-orange transition-colors text-white font-medium px-6 py-3 rounded-md"
-            >
-              Learn More About Us
-            </Link>
-          </div>
-          <div className="grid grid-cols-2 gap-4 text-center">
-            {[
-              { stat: "6+", label: "Service Areas" },
-              { stat: "100%", label: "Transparent Pricing" },
-              { stat: "MTD", label: "Ready" },
-              { stat: "1 Day", label: "Response Time" },
-            ].map((item) => (
-              <div
-                key={item.label}
-                className="bg-white/10 rounded-lg px-4 py-6"
-              >
-                <p className="text-3xl font-bold text-brand-gold">
-                  {item.stat}
-                </p>
-                <p className="text-sm text-gray-300 mt-1">{item.label}</p>
-              </div>
-            ))}
-          </div>
+ {/* About teaser */}
+<section className="max-w-6xl mx-auto px-6 py-20">
+  <div className="bg-brand-navy rounded-2xl px-8 py-14 grid gap-8 md:grid-cols-2 items-center">
+    <div>
+      <p className="text-brand-gold font-semibold uppercase tracking-wide text-sm">
+        About Us
+      </p>
+      <h2 className="text-3xl font-bold text-white mt-2">
+        Real Accountants. Real Relationships.
+      </h2>
+      <p className="mt-4 text-gray-300 leading-relaxed">
+        Puma Business Services was built on the belief that every
+        business deserves clear, reliable financial support, whether
+        you're a sole trader just starting out or an established
+        limited company looking for more from your accountant.
+      </p>
+      <Link
+        href="/about"
+        className="inline-block mt-6 bg-brand-red hover:bg-brand-orange transition-colors text-white font-medium px-6 py-3 rounded-md"
+      >
+        Learn More About Us
+      </Link>
+    </div>
+
+    {/* Stats */}
+    <div className="grid grid-cols-2 gap-4 text-center">
+      {[
+        { stat: "6+", label: "Service Areas" },
+        { stat: "100%", label: "Transparent Pricing" },
+        { stat: "MTD", label: "Ready" },
+        { stat: "1 Day", label: "Response Time" },
+      ].map((item) => (
+        <div
+          key={item.label}
+          className="bg-black rounded-lg px-4 py-6"
+        >
+          <p className="text-3xl font-bold text-white">
+            {item.stat}
+          </p>
+          <p className="text-sm text-gray-300 mt-1">
+            {item.label}
+          </p>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* CTA banner */}
       <section className="bg-brand-navy">
