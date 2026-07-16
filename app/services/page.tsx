@@ -1,9 +1,15 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Services We Offer | Puma Business Services",
+  description: "From accounts and tax to payroll, VAT, bookkeeping and business advisory, Puma Business Services covers every aspect of your financial needs.",
+};
 
 const services = [
   {
     title: "Accounts & Tax",
-    color: "brand-red",
+    href: "/services/accounts-tax",
     items: [
       "Limited company accounts",
       "Sole trader accounts",
@@ -19,7 +25,7 @@ const services = [
   },
   {
     title: "Bookkeeping & Cloud Accounting",
-    color: "brand-red",
+    href: "/services/bookkeeping-cloud-accounting",
     items: [
       "Bookkeeping",
       "Bank reconciliations",
@@ -33,7 +39,7 @@ const services = [
   },
   {
     title: "VAT & CIS",
-    color: "brand-red",
+    href: "/services/vat-cis",
     items: [
       "VAT registration",
       "VAT returns",
@@ -45,7 +51,7 @@ const services = [
   },
   {
     title: "Payroll & Pensions",
-    color: "brand-red",
+    href: "/services/payroll-pensions",
     items: [
       "Payroll setup and processing",
       "RTI submissions",
@@ -56,7 +62,7 @@ const services = [
   },
   {
     title: "Business Advisory",
-    color: "brand-red",
+    href: "/services/business-advisory",
     items: [
       "Business start-up support",
       "Company formation",
@@ -74,7 +80,7 @@ const services = [
   },
   {
     title: "Additional Finance Support",
-    color: "brand-red",
+    href: "/services/additional-finance-support",
     items: [
       "Monthly management accounts",
       "Board packs and reporting packs",
@@ -135,7 +141,7 @@ export default function ServicesPage() {
           {services.map((service) => (
             <div
               key={service.title}
-              className="border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow"
+              className="border border-gray-200 rounded-xl p-6 hover:shadow-md hover:border-brand-red transition-all flex flex-col"
             >
               <div className="flex items-center gap-3 mb-5">
                 <div className="w-1 h-8 bg-brand-red rounded" />
@@ -143,7 +149,7 @@ export default function ServicesPage() {
                   {service.title}
                 </h2>
               </div>
-              <ul className="space-y-2">
+              <ul className="space-y-2 flex-1">
                 {service.items.map((item) => (
                   <li
                     key={item}
@@ -154,6 +160,14 @@ export default function ServicesPage() {
                   </li>
                 ))}
               </ul>
+              <div className="mt-6 pt-5 border-t border-gray-100">
+                <Link
+                  href={service.href}
+                  className="inline-block bg-brand-red hover:bg-brand-orange transition-colors text-white text-sm font-medium px-5 py-2.5 rounded-md"
+                >
+                  Learn More →
+                </Link>
+              </div>
             </div>
           ))}
         </div>
@@ -191,7 +205,7 @@ export default function ServicesPage() {
             Not sure which service you need?
           </h2>
           <p className="text-gray-300 mt-3 max-w-lg mx-auto">
-            Drop us an email and we&apos;ll point you in the right direction, no obligation, no sales pitch.
+            Drop us an email and we&apos;ll point you in the right direction — no obligation, no sales pitch.
           </p>
           <Link
             href="/contact"

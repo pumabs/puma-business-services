@@ -24,7 +24,7 @@ export default function Header() {
             <Image
               src="/pbs_logo.jpg"
               alt="Puma Business Services Limited"
-              width={400}
+              width={250}
               height={100}
               priority
             />

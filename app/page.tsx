@@ -9,26 +9,32 @@ export const metadata: Metadata = {
 const serviceCategories = [
   {
     title: "Accounts & Tax",
+    href: "/services/accounts-tax",
     desc: "Limited company and sole trader accounts, corporation tax, self-assessment, director tax planning, and HMRC correspondence.",
   },
   {
     title: "Bookkeeping & Cloud Accounting",
+    href: "/services/bookkeeping-cloud-accounting",
     desc: "Full bookkeeping support, bank reconciliations, cloud accounting setup, and support for Xero, Sage and FreeAgent.",
   },
   {
     title: "VAT & CIS",
+    href: "/services/vat-cis",
     desc: "VAT registration, returns, Making Tax Digital support, CIS registrations and returns.",
   },
   {
     title: "Payroll & Pensions",
+    href: "/services/payroll-pensions",
     desc: "Payroll setup and processing, RTI submissions, P45s and P60s, and workplace pension and auto enrolment support.",
   },
   {
     title: "Business Advisory",
+    href: "/services/business-advisory",
     desc: "Business start-up support, company formation, profit reviews, cash flow planning, and finance process reviews.",
   },
   {
     title: "Additional Finance Support",
+    href: "/services/additional-finance-support",
     desc: "Management accounts, board packs, budgeting and forecasting, KPI reporting, and financial controls.",
   },
 ];
