@@ -2,35 +2,35 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Puma | Puma Business Services",
+  title: "About | Puma Business Services",
   description:
-    "Find out more about Puma Business Services and our practical, personal approach to accountancy, reporting and business support.",
+    "Learn more about Puma Business Services and our approach to accountancy, financial reporting and practical business support.",
 };
 
 const values = [
   {
     number: "01",
-    title: "Personal",
-    body: "Good advice starts with understanding the business behind the numbers. Puma takes the time to understand how you operate, what matters to you and where you want to go.",
+    title: "Clear",
+    text: "Accountancy and financial matters explained in straightforward language, so you understand what the numbers actually mean.",
   },
   {
     number: "02",
-    title: "Straightforward",
-    body: "Accountancy can be complicated. The explanation does not need to be. The aim is to make financial matters clear, practical and easy to act on.",
+    title: "Personal",
+    text: "A direct relationship with someone who gets to know you, your business and the circumstances behind the figures.",
   },
   {
     number: "03",
-    title: "Proactive",
-    body: "The job should not begin and end with filing deadlines. Where the numbers highlight something worth discussing, Puma will help you understand it and consider what to do next.",
+    title: "Practical",
+    text: "Advice that considers how your business actually operates, rather than simply providing a textbook answer.",
   },
   {
     number: "04",
-    title: "Practical",
-    body: "Advice needs to work in the real world. Recommendations are considered in the context of your business, your circumstances and what is realistically achievable.",
+    title: "Forward-Looking",
+    text: "Support that looks beyond the next filing deadline and helps you think about performance, planning and what comes next.",
   },
 ];
 
-const services = [
+const supportAreas = [
   "Accounts & Tax",
   "Bookkeeping & Cloud Accounting",
   "VAT & CIS",
@@ -45,367 +45,324 @@ export default function AboutPage() {
 
       {/* HERO */}
       <section className="relative overflow-hidden bg-brand-purple-dark text-white">
-        <div className="absolute -top-32 -right-24 w-96 h-96 rounded-full bg-brand-purple opacity-35" />
-        <div className="absolute -bottom-36 left-1/3 w-80 h-80 rounded-full bg-brand-purple-mid opacity-15 blur-3xl" />
+        <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-brand-purple opacity-30" />
+        <div className="absolute -bottom-28 left-1/3 w-72 h-72 rounded-full bg-brand-purple-mid opacity-15 blur-3xl" />
 
-        <div className="relative max-w-7xl mx-auto px-6 py-24 lg:py-32">
-          <div className="max-w-4xl">
+        <div className="relative max-w-7xl mx-auto px-6 py-16 lg:py-20">
+          <div className="max-w-3xl">
 
-            <p className="text-brand-purple-soft font-semibold uppercase tracking-[0.25em] text-sm">
+            <p className="text-brand-purple-soft font-semibold uppercase tracking-[0.22em] text-xs sm:text-sm">
               About Puma
             </p>
 
-            <h1 className="mt-5 text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight">
-              Accountancy with a
+            <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight">
+              Accountancy built around
               <span className="block text-brand-purple-soft">
-                more personal approach.
+                the business behind the numbers.
               </span>
             </h1>
 
-            <p className="mt-7 text-lg sm:text-xl text-white/70 max-w-2xl leading-relaxed">
-              Puma Business Services was created to provide business owners
-              with clear, practical financial support and a relationship that
-              goes beyond simply dealing with the next deadline.
+            <p className="mt-6 text-base sm:text-lg text-white/70 max-w-2xl leading-relaxed">
+              Puma Business Services combines the essential accountancy work
+              businesses need with practical support, clear communication and
+              a greater focus on understanding the numbers.
             </p>
 
           </div>
         </div>
       </section>
 
-      {/* INTRO / STORY */}
+      {/* OUR APPROACH */}
       <section className="bg-brand-cream">
-        <div className="max-w-7xl mx-auto px-6 py-24">
+        <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
 
-          <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-14 lg:gap-24 items-start">
+          <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-16 items-start">
 
             <div>
-              <p className="text-brand-purple font-semibold uppercase tracking-[0.2em] text-sm">
-                The Approach
+              <p className="text-brand-purple font-semibold uppercase tracking-[0.18em] text-xs sm:text-sm">
+                Our Approach
               </p>
 
-              <h2 className="mt-4 text-4xl sm:text-5xl font-bold text-brand-purple-dark leading-tight">
-                Understanding the business, not just the accounts.
+              <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-brand-purple-dark leading-tight">
+                More than producing accounts and filing returns.
               </h2>
             </div>
 
-            <div className="space-y-6 text-lg text-brand-slate leading-relaxed">
+            <div className="space-y-5 text-base sm:text-lg text-brand-slate leading-relaxed">
 
               <p>
-                Puma Business Services is built around a simple idea:
-                accountancy should be useful.
+                Puma Business Services was built around a straightforward idea:
+                accountancy should be useful to the person running the
+                business, not simply something completed because it has to be.
               </p>
 
               <p>
-                Of course, getting the fundamentals right matters. Accounts
-                need preparing, tax returns need filing, payroll needs running
-                and businesses need to stay compliant. But those tasks are
-                only part of the picture.
+                Compliance remains an important part of that. Accounts need to
+                be accurate, returns need to be submitted and deadlines need to
+                be managed properly.
               </p>
 
               <p>
-                The numbers within a business can also tell you what is
-                working, where pressure is building, how performance is
-                changing and what may lie ahead. Puma aims to help clients
-                make use of that information rather than only looking at it
-                after the year has finished.
+                But there is often much more value in the information behind
+                those accounts. Understanding profitability, cash flow, costs,
+                margins and financial trends can help business owners make
+                better-informed decisions throughout the year.
               </p>
 
               <p>
-                That means combining reliable accountancy work with ongoing
-                conversations, practical advice and, where useful, more
-                detailed management information and financial analysis.
+                That is where Puma aims to be different: combining reliable
+                accountancy with practical financial support that can develop
+                alongside the business.
               </p>
 
             </div>
-          </div>
-
-        </div>
-      </section>
-
-      {/* DAN / PERSONAL SERVICE */}
-      <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-6 py-24">
-
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-
-            {/* Visual card */}
-            <div className="relative">
-              <div className="bg-brand-purple-dark rounded-[2rem] p-8 sm:p-10 min-h-[430px] flex flex-col justify-between overflow-hidden relative">
-
-                <div className="absolute -right-24 -top-24 w-72 h-72 bg-brand-purple rounded-full opacity-40" />
-                <div className="absolute -left-20 -bottom-24 w-64 h-64 bg-brand-purple-mid rounded-full opacity-20" />
-
-                <div className="relative">
-                  <p className="text-brand-purple-soft uppercase tracking-[0.2em] font-semibold text-sm">
-                    Puma Business Services
-                  </p>
-
-                  <p className="mt-5 text-4xl sm:text-5xl font-bold text-white leading-tight">
-                    Small enough to
-                    <span className="block text-brand-purple-soft">
-                      know your business.
-                    </span>
-                  </p>
-                </div>
-
-                <div className="relative grid grid-cols-2 gap-4 mt-14">
-                  <div className="bg-white/10 border border-white/10 rounded-2xl p-5">
-                    <p className="text-white font-semibold">
-                      Direct
-                    </p>
-                    <p className="text-white/60 text-sm mt-2">
-                      A personal point of contact
-                    </p>
-                  </div>
-
-                  <div className="bg-white/10 border border-white/10 rounded-2xl p-5">
-                    <p className="text-white font-semibold">
-                      Flexible
-                    </p>
-                    <p className="text-white/60 text-sm mt-2">
-                      Support built around your needs
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            {/* Copy */}
-            <div>
-              <p className="text-brand-purple font-semibold uppercase tracking-[0.2em] text-sm">
-                Meet Dan
-              </p>
-
-              <h2 className="mt-4 text-4xl sm:text-5xl font-bold text-brand-purple-dark leading-tight">
-                One relationship. A broad range of support.
-              </h2>
-
-              <div className="mt-7 space-y-5 text-brand-slate text-lg leading-relaxed">
-
-                <p>
-                  Puma is run by Dan, providing accountancy and financial
-                  support to businesses and individuals from Buxton and the
-                  surrounding area, as well as clients further afield.
-                </p>
-
-                <p>
-                  The advantage of working with a smaller practice is that the
-                  person you speak to is also the person who understands the
-                  work. There is no need to repeatedly explain your business
-                  to different departments or work through layers of people.
-                </p>
-
-                <p>
-                  Over time, that relationship makes it easier to understand
-                  the context behind the figures, spot unusual movements and
-                  have more useful conversations about the decisions facing
-                  the business.
-                </p>
-
-              </div>
-            </div>
-
           </div>
         </div>
       </section>
 
       {/* VALUES */}
-      <section className="bg-brand-lilac">
-        <div className="max-w-7xl mx-auto px-6 py-24">
+      <section className="bg-white">
+        <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
 
           <div className="max-w-3xl">
-            <p className="text-brand-purple font-semibold uppercase tracking-[0.2em] text-sm">
-              How Puma Works
+            <p className="text-brand-purple font-semibold uppercase tracking-[0.18em] text-xs sm:text-sm">
+              What Matters
             </p>
 
-            <h2 className="mt-4 text-4xl sm:text-5xl font-bold text-brand-purple-dark">
-              The principles behind the service.
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-brand-purple-dark">
+              A straightforward way of working.
             </h2>
 
-            <p className="mt-5 text-lg text-brand-slate leading-relaxed">
-              Different clients need different levels of support, but the
-              approach to providing it should remain consistent.
+            <p className="mt-4 text-base sm:text-lg text-brand-slate leading-relaxed">
+              The service is built around a few simple principles.
             </p>
           </div>
 
-          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
 
             {values.map((value) => (
               <div
                 key={value.title}
-                className="bg-white rounded-3xl p-8 min-h-[310px] flex flex-col shadow-sm"
+                className="bg-brand-cream rounded-2xl p-7"
               >
-                <p className="text-brand-purple font-semibold">
+                <p className="text-brand-purple font-semibold text-sm">
                   {value.number}
                 </p>
 
-                <h3 className="mt-8 text-2xl font-bold text-brand-purple-dark">
+                <h3 className="mt-6 text-xl sm:text-2xl font-bold text-brand-purple-dark">
                   {value.title}
                 </h3>
 
-                <p className="mt-4 text-brand-slate leading-relaxed">
-                  {value.body}
+                <p className="mt-3 text-brand-slate leading-relaxed text-sm sm:text-base">
+                  {value.text}
                 </p>
               </div>
             ))}
 
           </div>
-
         </div>
       </section>
 
-      {/* SERVICES */}
-      <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-6 py-24">
-
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
-
-            <div>
-              <p className="text-brand-purple font-semibold uppercase tracking-[0.2em] text-sm">
-                What We Can Help With
-              </p>
-
-              <h2 className="mt-4 text-4xl sm:text-5xl font-bold text-brand-purple-dark leading-tight">
-                Support that can grow with your business.
-              </h2>
-
-              <p className="mt-6 text-lg text-brand-slate leading-relaxed max-w-xl">
-                Some clients need support with a specific area. Others want
-                Puma involved across much more of their finance function.
-                The level of involvement can develop as the needs of the
-                business change.
-              </p>
-
-              <Link
-                href="/services"
-                className="inline-block mt-8 bg-brand-purple hover:bg-brand-purple-mid transition-colors text-white px-7 py-3.5 rounded-full font-semibold"
-              >
-                Explore All Services
-              </Link>
-            </div>
-
-            <div className="bg-brand-cream rounded-[2rem] p-7 sm:p-9">
-
-              <div className="divide-y divide-brand-purple-soft">
-
-                {services.map((service, index) => (
-                  <div
-                    key={service}
-                    className="flex items-center gap-5 py-5 first:pt-0 last:pb-0"
-                  >
-                    <span className="w-9 h-9 rounded-full bg-brand-purple text-white flex items-center justify-center text-sm font-semibold flex-shrink-0">
-                      {index + 1}
-                    </span>
-
-                    <p className="text-brand-purple-dark font-semibold text-lg">
-                      {service}
-                    </p>
-                  </div>
-                ))}
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-      {/* DIFFERENCE */}
+      {/* PERSONAL SERVICE */}
       <section className="bg-brand-purple-dark text-white">
-        <div className="max-w-7xl mx-auto px-6 py-24">
+        <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
 
-          <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-16 items-start">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
             <div>
-              <p className="text-brand-purple-soft font-semibold uppercase tracking-[0.2em] text-sm">
-                More Than Compliance
+              <p className="text-brand-purple-soft font-semibold uppercase tracking-[0.18em] text-xs sm:text-sm">
+                Personal Service
               </p>
 
-              <h2 className="mt-4 text-4xl sm:text-5xl font-bold leading-tight">
-                The right level of support at the right time.
+              <h2 className="mt-3 text-3xl sm:text-4xl font-bold leading-tight">
+                Know who you&apos;re dealing with.
               </h2>
+
+              <p className="mt-5 text-base sm:text-lg text-white/70 leading-relaxed max-w-xl">
+                Building a good working relationship makes accountancy easier.
+                The more your accountant understands about the business, its
+                owners and what they are trying to achieve, the more useful
+                that support can become.
+              </p>
+
+              <p className="mt-4 text-base sm:text-lg text-white/70 leading-relaxed max-w-xl">
+                Puma takes a hands-on approach, with direct communication and
+                support that reflects the circumstances of the individual
+                client rather than forcing everyone into the same process.
+              </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-5">
+            <div className="grid sm:grid-cols-2 gap-4">
 
               {[
-                [
-                  "The Essentials",
-                  "Accounts, tax, VAT, payroll, bookkeeping and the recurring work needed to keep things running properly.",
-                ],
-                [
-                  "The Bigger Picture",
-                  "Reporting, forecasting and analysis for businesses that want greater visibility over performance.",
-                ],
-                [
-                  "When Things Change",
-                  "Practical support when the business grows, restructures, takes on staff or faces a new financial decision.",
-                ],
-                [
-                  "Someone to Ask",
-                  "A point of contact when something comes up and you need to understand the accounting or financial implications.",
-                ],
+                ["Direct Contact", "Speak directly with the person looking after your accounts and financial matters."],
+                ["Clear Answers", "Questions explained in straightforward language without unnecessary jargon."],
+                ["Business Context", "Advice that takes account of what is actually happening within your business."],
+                ["Ongoing Support", "Help available throughout the year rather than only when a deadline approaches."],
               ].map(([title, text]) => (
                 <div
                   key={title}
-                  className="bg-white/10 border border-white/10 rounded-3xl p-7"
+                  className="bg-white/10 border border-white/10 rounded-2xl p-5"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-brand-purple mb-7" />
+                  <div className="w-9 h-9 bg-brand-purple rounded-xl mb-6" />
 
-                  <h3 className="text-xl font-bold">
+                  <h3 className="font-bold text-lg">
                     {title}
                   </h3>
 
-                  <p className="mt-3 text-white/65 leading-relaxed text-sm">
+                  <p className="text-white/60 mt-2 text-sm leading-relaxed">
                     {text}
                   </p>
                 </div>
               ))}
 
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WHAT WE SUPPORT */}
+      <section className="bg-brand-lilac">
+        <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
+
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+            <div>
+              <p className="text-brand-purple font-semibold uppercase tracking-[0.18em] text-xs sm:text-sm">
+                What We Support
+              </p>
+
+              <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-brand-purple-dark leading-tight">
+                From the essentials to deeper financial insight.
+              </h2>
+
+              <p className="mt-5 text-base sm:text-lg text-brand-slate leading-relaxed max-w-xl">
+                Support can range from individual compliance services through
+                to a much broader role across the financial side of a
+                business.
+              </p>
+
+              <p className="mt-4 text-base sm:text-lg text-brand-slate leading-relaxed max-w-xl">
+                The level of involvement depends on what is useful for the
+                client and can change as the business develops.
+              </p>
+
+              <Link
+                href="/services"
+                className="inline-block mt-6 bg-brand-purple text-white hover:bg-brand-purple-dark transition-colors px-6 py-3 rounded-full font-semibold text-sm"
+              >
+                Explore Our Services
+              </Link>
+            </div>
+
+            <div className="bg-white rounded-[2rem] p-7 sm:p-9">
+
+              <div className="space-y-3">
+                {supportAreas.map((item, index) => (
+                  <div
+                    key={item}
+                    className="flex items-center gap-4 py-3 border-b border-brand-purple-soft last:border-0"
+                  >
+                    <span className="text-brand-purple font-semibold text-sm w-7">
+                      0{index + 1}
+                    </span>
+
+                    <span className="font-semibold text-brand-purple-dark">
+                      {item}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WHO WE WORK WITH */}
+      <section className="bg-white">
+        <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
+
+          <div className="text-center max-w-3xl mx-auto">
+
+            <p className="text-brand-purple font-semibold uppercase tracking-[0.18em] text-xs sm:text-sm">
+              Who We Work With
+            </p>
+
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-brand-purple-dark">
+              Support that can grow with you.
+            </h2>
+
+            <p className="mt-4 text-base sm:text-lg text-brand-slate leading-relaxed">
+              Puma works with individuals, sole traders, limited companies,
+              directors and growing businesses across a range of industries.
+              Whether you need help with one area or wider financial support,
+              the starting point is understanding what your circumstances
+              actually require.
+            </p>
+
+          </div>
+
+          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+            {[
+              ["Individuals", "Tax and financial matters that need clear, practical support."],
+              ["Sole Traders", "Accounts, tax, bookkeeping and support as the business develops."],
+              ["Limited Companies", "Compliance, payroll, VAT, reporting and director support."],
+              ["Growing Businesses", "Deeper reporting, forecasting, analysis and wider financial support."],
+            ].map(([title, text]) => (
+              <div
+                key={title}
+                className="border border-brand-purple-soft rounded-2xl p-6"
+              >
+                <h3 className="font-bold text-brand-purple-dark text-lg">
+                  {title}
+                </h3>
+
+                <p className="mt-3 text-brand-slate text-sm leading-relaxed">
+                  {text}
+                </p>
+              </div>
+            ))}
 
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-6 py-24">
+      <section className="bg-white pb-16 lg:pb-20">
+        <div className="max-w-7xl mx-auto px-6">
 
-          <div className="bg-brand-purple rounded-[2.5rem] px-8 py-16 sm:px-14 sm:py-20 text-white text-center relative overflow-hidden">
+          <div className="relative overflow-hidden bg-brand-purple rounded-[2rem] px-7 py-12 sm:px-10 sm:py-14 text-white">
 
-            <div className="absolute -right-20 -bottom-24 w-80 h-80 bg-brand-purple-soft/20 rounded-full" />
-            <div className="absolute -left-24 -top-32 w-72 h-72 bg-brand-purple-dark/20 rounded-full" />
+            <div className="absolute -right-16 -bottom-20 w-64 h-64 bg-brand-purple-soft/20 rounded-full" />
+            <div className="absolute -left-20 -top-24 w-60 h-60 bg-brand-purple-dark/20 rounded-full" />
 
-            <div className="relative max-w-3xl mx-auto">
+            <div className="relative max-w-3xl">
 
-              <p className="text-brand-purple-soft font-semibold uppercase tracking-[0.2em] text-sm">
+              <p className="text-brand-purple-soft uppercase tracking-[0.18em] font-semibold text-xs sm:text-sm">
                 Get in Touch
               </p>
 
-              <h2 className="mt-4 text-4xl sm:text-5xl font-bold leading-tight">
-                See if Puma is the right fit for your business.
+              <h2 className="mt-3 text-3xl sm:text-4xl font-bold leading-tight">
+                Looking for an accountant who understands the bigger picture?
               </h2>
 
-              <p className="mt-5 text-lg text-white/75 max-w-2xl mx-auto leading-relaxed">
-                If you are looking for accountancy support or simply want to
-                discuss where Puma may be able to help, get in touch for an
-                initial conversation.
+              <p className="mt-4 text-base sm:text-lg text-white/75 max-w-2xl leading-relaxed">
+                Tell us a little about you or your business and what you are
+                looking for. We can then discuss where Puma may be able to
+                help.
               </p>
 
               <Link
                 href="/contact"
-                className="inline-block mt-8 bg-white text-brand-purple-dark hover:bg-brand-purple-soft transition-colors px-7 py-3.5 rounded-full font-semibold"
+                className="inline-block mt-6 bg-white text-brand-purple-dark hover:bg-brand-purple-soft transition-colors px-6 py-3 rounded-full font-semibold text-sm"
               >
                 Start a Conversation
               </Link>
 
             </div>
           </div>
-
         </div>
       </section>
 
