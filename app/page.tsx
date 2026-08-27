@@ -2,59 +2,56 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Puma Business Services | Accountants You Can Trust",
-  description: "Puma Business Services offers accountancy, bookkeeping, VAT, payroll, and business advisory services for sole traders and limited companies. Fixed fees, personal service.",
+  title: "Puma Business Services | Accountancy & Business Support",
+  description:
+    "Puma Business Services provides accountancy, bookkeeping, tax, payroll and business advisory support for businesses and individuals.",
 };
 
 const serviceCategories = [
   {
+    number: "01",
     title: "Accounts & Tax",
-    href: "/services/accounts-tax",
-    desc: "Limited company and sole trader accounts, corporation tax, self-assessment, director tax planning, and HMRC correspondence.",
+    desc: "Limited company and sole trader accounts, corporation tax, self-assessment and tax planning.",
   },
   {
+    number: "02",
     title: "Bookkeeping & Cloud Accounting",
-    href: "/services/bookkeeping-cloud-accounting",
-    desc: "Full bookkeeping support, bank reconciliations, cloud accounting setup, and support for Xero, Sage and FreeAgent.",
+    desc: "Day-to-day bookkeeping, reconciliations and support across Xero, Sage and FreeAgent.",
   },
   {
+    number: "03",
     title: "VAT & CIS",
-    href: "/services/vat-cis",
-    desc: "VAT registration, returns, Making Tax Digital support, CIS registrations and returns.",
+    desc: "VAT returns, registrations, Making Tax Digital support and CIS compliance.",
   },
   {
+    number: "04",
     title: "Payroll & Pensions",
-    href: "/services/payroll-pensions",
-    desc: "Payroll setup and processing, RTI submissions, P45s and P60s, and workplace pension and auto enrolment support.",
+    desc: "Payroll processing, RTI submissions, workplace pensions and auto enrolment support.",
   },
   {
+    number: "05",
     title: "Business Advisory",
-    href: "/services/business-advisory",
-    desc: "Business start-up support, company formation, profit reviews, cash flow planning, and finance process reviews.",
+    desc: "Practical financial support, planning and advice to help businesses move forward.",
   },
   {
-    title: "Additional Finance Support",
-    href: "/services/additional-finance-support",
-    desc: "Management accounts, board packs, budgeting and forecasting, KPI reporting, and financial controls.",
+    number: "06",
+    title: "Management Reporting",
+    desc: "Management accounts, forecasting, KPI reporting and financial insight.",
   },
 ];
 
 const trustPoints = [
   {
-    heading: "Personal Service",
-    body: "You work directly with an experienced accountant — not a call centre or a rotating team of strangers.",
+    title: "Personal",
+    text: "Straightforward support with a direct point of contact.",
   },
   {
-    heading: "Clear Communication",
-    body: "No jargon, no surprises. We explain what's happening with your finances in plain English.",
+    title: "Clear",
+    text: "Plain-English explanations without unnecessary jargon.",
   },
   {
-    heading: "Proactive Advice",
-    body: "We don't just file your numbers — we help you understand them and plan ahead.",
-  },
-  {
-    heading: "Fixed Fees",
-    body: "Know exactly what you'll pay before we start. No hidden charges, no hourly billing anxiety.",
+    title: "Proactive",
+    text: "Support that looks ahead rather than simply reporting the past.",
   },
 ];
 
@@ -62,106 +59,224 @@ export default function Home() {
   return (
     <div className="flex flex-col flex-1">
 
-      {/* Hero */}
-      <section className="bg-brand-navy text-white">
-        <div className="max-w-6xl mx-auto px-6 py-24 sm:text-left text-center">
-          <p className="text-brand-gold font-semibold uppercase tracking-wide text-sm">
-            Accountancy Built Around Your Business
-          </p>
-          <h1 className="text-4xl sm:text-5xl font-bold leading-tight mt-3">
-            Trusted Accountancy,{" "}
-            <span className="text-brand-orange">Simplified</span>
-          </h1>
-          <p className="mt-5 max-w-xl text-lg text-gray-300 sm:mx-0 mx-auto">
-            Puma Business Services helps individuals and businesses stay
-            compliant, save money, and plan for the future, with no jargon
-            and no surprises.
-          </p>
-          <div className="flex flex-wrap gap-4 mt-8 sm:justify-start justify-center">
-            <Link
-              href="/contact"
-              className="bg-brand-red hover:bg-brand-orange transition-colors text-white font-medium px-6 py-3 rounded-md"
-            >
-              Get in Touch
-            </Link>
+      {/* HERO */}
+      <section className="relative overflow-hidden bg-brand-purple-dark text-white">
+        <div className="absolute -top-28 -right-28 w-96 h-96 rounded-full bg-brand-purple opacity-40" />
+        <div className="absolute bottom-0 right-1/4 w-72 h-72 rounded-full bg-brand-purple-mid opacity-20 blur-3xl" />
+
+        <div className="relative max-w-7xl mx-auto px-6 py-28 lg:py-36 grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <p className="text-brand-purple-soft font-semibold uppercase tracking-[0.25em] text-sm">
+              Puma Business Services
+            </p>
+
+            <h1 className="mt-5 text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight">
+              Accountancy built around
+              <span className="block text-brand-purple-soft">
+                your business.
+              </span>
+            </h1>
+
+            <p className="mt-7 text-lg text-white/70 max-w-xl leading-relaxed">
+              Clear financial support, practical advice and better visibility
+              over your numbers — without the jargon.
+            </p>
+
+            <div className="flex flex-wrap gap-4 mt-9">
+              <Link
+                href="/contact"
+                className="bg-white text-brand-purple-dark hover:bg-brand-purple-soft transition-colors font-semibold px-7 py-3.5 rounded-full"
+              >
+                Get in Touch
+              </Link>
+
+              <Link
+                href="/services"
+                className="border border-white/30 hover:border-white text-white transition-colors font-semibold px-7 py-3.5 rounded-full"
+              >
+                Explore Services
+              </Link>
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="bg-white/10 backdrop-blur-sm border border-white/15 rounded-[2rem] p-8 shadow-2xl">
+              <p className="text-sm text-brand-purple-soft uppercase tracking-widest">
+                Better Financial Visibility
+              </p>
+
+              <div className="mt-8 space-y-5">
+                <div className="bg-white rounded-2xl p-6 text-brand-purple-dark">
+                  <p className="text-sm text-brand-slate">Revenue overview</p>
+                  <p className="text-4xl font-bold mt-2">£428k</p>
+                  <p className="text-sm text-brand-purple mt-2">
+                    +12.4% year on year
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-brand-lilac rounded-2xl p-5 text-brand-purple-dark">
+                    <p className="text-sm text-brand-slate">Gross Margin</p>
+                    <p className="text-3xl font-bold mt-2">34%</p>
+                  </div>
+
+                  <div className="bg-brand-purple text-white rounded-2xl p-5">
+                    <p className="text-sm text-white/70">Forecast</p>
+                    <p className="text-3xl font-bold mt-2">On Track</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* INTRO */}
+      <section className="bg-brand-cream">
+        <div className="max-w-7xl mx-auto px-6 py-24">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
+            <div>
+              <p className="text-brand-purple font-semibold uppercase tracking-[0.2em] text-sm">
+                What We Do
+              </p>
+
+              <h2 className="mt-4 text-4xl sm:text-5xl font-bold text-brand-purple-dark leading-tight">
+                More than year-end accounts.
+              </h2>
+            </div>
+
+            <div>
+              <p className="text-xl text-brand-slate leading-relaxed">
+                Puma provides practical financial support throughout the year,
+                helping businesses stay compliant while also giving owners a
+                clearer understanding of how their business is performing.
+              </p>
+
+              <Link
+                href="/about"
+                className="inline-flex items-center mt-8 font-semibold text-brand-purple hover:text-brand-purple-dark"
+              >
+                Learn more about Puma
+                <span className="ml-2">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICES */}
+      <section className="bg-white">
+        <div className="max-w-7xl mx-auto px-6 py-24">
+          <div className="max-w-2xl">
+            <p className="text-brand-purple font-semibold uppercase tracking-[0.2em] text-sm">
+              Services
+            </p>
+
+            <h2 className="mt-4 text-4xl sm:text-5xl font-bold text-brand-purple-dark">
+              Support across your finances.
+            </h2>
+          </div>
+
+          <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {serviceCategories.map((service) => (
+              <div
+                key={service.title}
+                className="group bg-brand-cream hover:bg-brand-purple-dark rounded-3xl p-8 transition-all duration-300 min-h-[260px] flex flex-col"
+              >
+                <p className="text-brand-purple group-hover:text-brand-purple-soft font-semibold">
+                  {service.number}
+                </p>
+
+                <h3 className="mt-8 text-2xl font-bold text-brand-purple-dark group-hover:text-white">
+                  {service.title}
+                </h3>
+
+                <p className="mt-4 text-brand-slate group-hover:text-white/70 leading-relaxed">
+                  {service.desc}
+                </p>
+
+                <span className="mt-auto pt-8 text-brand-purple group-hover:text-brand-purple-soft font-semibold">
+                  Learn more →
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* REPORTING FEATURE */}
+      <section className="bg-brand-purple-dark text-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <p className="text-brand-purple-soft font-semibold uppercase tracking-[0.2em] text-sm">
+              Management Reporting
+            </p>
+
+            <h2 className="mt-4 text-4xl sm:text-5xl font-bold leading-tight">
+              Know what your numbers are telling you.
+            </h2>
+
+            <p className="mt-6 text-lg text-white/70 leading-relaxed max-w-xl">
+              Go beyond historic accounts with management reporting,
+              forecasting and financial insight designed to help business
+              owners understand performance and make better decisions.
+            </p>
+
             <Link
               href="/services"
-              className="border border-white hover:border-brand-gold hover:text-brand-gold transition-colors text-white font-medium px-6 py-3 rounded-md"
+              className="inline-block mt-8 bg-brand-purple text-white hover:bg-brand-purple-mid transition-colors px-7 py-3.5 rounded-full font-semibold"
             >
-              View Our Services
+              Explore Reporting
             </Link>
           </div>
+
+          <div className="grid grid-cols-2 gap-5">
+            {[
+              ["Monthly Reporting", "Clear performance updates"],
+              ["Forecasting", "See what lies ahead"],
+              ["KPIs", "Track what matters"],
+              ["Business Insight", "Turn data into decisions"],
+            ].map(([title, text]) => (
+              <div
+                key={title}
+                className="bg-white/10 border border-white/10 rounded-3xl p-6"
+              >
+                <div className="w-10 h-10 bg-brand-purple rounded-xl mb-8" />
+                <h3 className="font-bold text-xl">{title}</h3>
+                <p className="text-white/60 mt-2 text-sm">{text}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Services overview */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
-        <div className="text-center">
-          <p className="text-brand-red font-semibold uppercase tracking-wide text-sm">
-            What We Do
-          </p>
-          <h2 className="text-3xl font-bold text-brand-navy mt-2">
-            Services We Offer
-          </h2>
-          <p className="mt-4 text-gray-600 max-w-xl mx-auto">
-            From day-to-day bookkeeping to strategic business advice, we cover
-            every aspect of your financial needs.
-          </p>
-        </div>
-
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-          {serviceCategories.map((service) => (
-            <div
-              key={service.title}
-              className="border border-gray-200 rounded-lg p-6 hover:shadow-md hover:border-brand-red transition-all"
-            >
-              <h3 className="text-lg font-semibold text-brand-navy">
-                {service.title}
-              </h3>
-              <p className="mt-2 text-gray-600 text-sm leading-relaxed">
-                {service.desc}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <div className="text-center mt-10">
-          <Link
-            href="/services"
-            className="inline-block bg-brand-red hover:bg-brand-orange transition-colors text-white font-medium px-6 py-3 rounded-md"
-          >
-            See Full Service List
-          </Link>
-        </div>
-      </section>
-
-      {/* Why choose us */}
-      <section className="bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6 py-20">
-          <div className="text-center">
-            <p className="text-brand-red font-semibold uppercase tracking-wide text-sm">
-              Why Puma?
+      {/* WHY PUMA */}
+      <section className="bg-brand-lilac">
+        <div className="max-w-7xl mx-auto px-6 py-24">
+          <div className="text-center max-w-2xl mx-auto">
+            <p className="text-brand-purple font-semibold uppercase tracking-[0.2em] text-sm">
+              Why Puma
             </p>
-            <h2 className="text-3xl font-bold text-brand-navy mt-2">
-              A Different Kind of Accountant
+
+            <h2 className="mt-4 text-4xl sm:text-5xl font-bold text-brand-purple-dark">
+              Straightforward support.
             </h2>
-            <p className="mt-4 text-gray-600 max-w-xl mx-auto">
-              We believe accountancy should feel straightforward, not stressful.
-              Here&apos;s what sets us apart.
-            </p>
           </div>
 
-          <div className="mt-12 grid gap-8 sm:grid-cols-2 md:grid-cols-4">
-            {trustPoints.map((point) => (
-              <div key={point.heading} className="text-center">
-                <div className="w-12 h-12 rounded-full bg-brand-red/10 flex items-center justify-center mx-auto">
-                  <div className="w-4 h-4 rounded-full bg-brand-red" />
-                </div>
-                <h3 className="font-semibold text-brand-navy mt-4">
-                  {point.heading}
+          <div className="mt-14 grid md:grid-cols-3 gap-6">
+            {trustPoints.map((item) => (
+              <div
+                key={item.title}
+                className="bg-white rounded-3xl p-8 shadow-sm"
+              >
+                <div className="w-12 h-12 rounded-full bg-brand-purple-soft" />
+
+                <h3 className="mt-8 text-2xl font-bold text-brand-purple-dark">
+                  {item.title}
                 </h3>
-                <p className="text-sm text-gray-600 mt-2 leading-relaxed">
-                  {point.body}
+
+                <p className="mt-3 text-brand-slate leading-relaxed">
+                  {item.text}
                 </p>
               </div>
             ))}
@@ -169,73 +284,38 @@ export default function Home() {
         </div>
       </section>
 
- {/* About teaser */}
-<section className="max-w-6xl mx-auto px-6 py-20">
-  <div className="bg-brand-navy rounded-2xl px-8 py-14 grid gap-8 md:grid-cols-2 items-center">
-    <div>
-      <p className="text-brand-gold font-semibold uppercase tracking-wide text-sm">
-        About Us
-      </p>
-      <h2 className="text-3xl font-bold text-white mt-2">
-        Real Accountants. Real Relationships.
-      </h2>
-      <p className="mt-4 text-gray-300 leading-relaxed">
-        Puma Business Services was built on the belief that every
-        business deserves clear, reliable financial support, whether
-        you're a sole trader just starting out or an established
-        limited company looking for more from your accountant.
-      </p>
-      <Link
-        href="/about"
-        className="inline-block mt-6 bg-brand-red hover:bg-brand-orange transition-colors text-white font-medium px-6 py-3 rounded-md"
-      >
-        Learn More About Us
-      </Link>
-    </div>
+      {/* CTA */}
+      <section className="bg-white">
+        <div className="max-w-7xl mx-auto px-6 py-24">
+          <div className="relative overflow-hidden bg-brand-purple rounded-[2.5rem] px-8 py-16 sm:px-14 sm:py-20 text-white">
+            <div className="absolute -right-20 -bottom-24 w-80 h-80 bg-brand-purple-soft/20 rounded-full" />
 
-    {/* Stats */}
-    <div className="grid grid-cols-2 gap-4 text-center">
-      {[
-        { stat: "6+", label: "Service Areas" },
-        { stat: "100%", label: "Transparent Pricing" },
-        { stat: "MTD", label: "Ready" },
-        { stat: "1 Day", label: "Response Time" },
-      ].map((item) => (
-        <div
-          key={item.label}
-          className="bg-black rounded-lg px-4 py-6"
-        >
-          <p className="text-3xl font-bold text-white">
-            {item.stat}
-          </p>
-          <p className="text-sm text-gray-300 mt-1">
-            {item.label}
-          </p>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
+            <div className="relative max-w-3xl">
+              <p className="text-brand-purple-soft uppercase tracking-[0.2em] font-semibold text-sm">
+                Let&apos;s Talk
+              </p>
 
-      {/* CTA banner */}
-      <section className="bg-brand-navy">
-        <div className="max-w-6xl mx-auto px-6 py-16 text-center">
-          <h2 className="text-2xl font-bold text-white">
-            Ready to take the stress out of your accounts?
-          </h2>
-          <p className="text-gray-300 mt-3 max-w-lg mx-auto">
-            Get in touch today for a free, no-obligation conversation about
-            what Puma Business Services can do for you.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-block mt-6 bg-brand-red hover:bg-brand-orange transition-colors text-white font-medium px-6 py-3 rounded-md"
-          >
-            Contact Us Today
-          </Link>
+              <h2 className="mt-4 text-4xl sm:text-5xl font-bold leading-tight">
+                Looking for more from your accountant?
+              </h2>
+
+              <p className="mt-5 text-lg text-white/75 max-w-xl">
+                Get in touch for a straightforward conversation about how Puma
+                can support you and your business.
+              </p>
+
+              <Link
+                href="/contact"
+                className="inline-block mt-8 bg-white text-brand-purple-dark hover:bg-brand-purple-soft transition-colors px-7 py-3.5 rounded-full font-semibold"
+              >
+                Start a Conversation
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
     </div>
   );
+}
 }
