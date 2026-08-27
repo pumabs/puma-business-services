@@ -2,21 +2,24 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Services We Offer | Puma Business Services",
-  description: "From accounts and tax to payroll, VAT, bookkeeping and business advisory, Puma Business Services covers every aspect of your financial needs.",
+  title: "Services | Puma Business Services",
+  description:
+    "Accountancy, tax, bookkeeping, VAT, CIS, payroll, management reporting and practical business support from Puma Business Services.",
 };
 
 const services = [
   {
+    number: "01",
     title: "Accounts & Tax",
-    href: "/services/accounts-tax",
+    intro:
+      "Reliable year-end compliance and ongoing tax support for limited companies, sole traders, directors and individuals.",
     items: [
       "Limited company accounts",
       "Sole trader accounts",
       "Corporation tax returns",
       "Self-Assessment tax returns",
       "Director tax planning",
-      "Dividend planning",
+      "Dividend and remuneration planning",
       "Companies House filings",
       "Confirmation statements",
       "HMRC correspondence",
@@ -24,78 +27,127 @@ const services = [
     ],
   },
   {
+    number: "02",
     title: "Bookkeeping & Cloud Accounting",
-    href: "/services/bookkeeping-cloud-accounting",
+    intro:
+      "Accurate, up-to-date records with practical support across the systems your business uses day to day.",
     items: [
       "Bookkeeping",
       "Bank reconciliations",
-      "Sales and purchase ledger support",
+      "Sales ledger support",
+      "Purchase ledger support",
       "Receipt and invoice processing",
       "Cloud accounting setup",
-      "Xero, Sage Accounting, Sage 50 and FreeAgent support",
-      "Management reports",
+      "Xero support",
+      "Sage Accounting support",
+      "Sage 50 support",
+      "FreeAgent support",
       "Software clean-up and correction work",
+      "Process improvements and reporting automation",
     ],
   },
   {
+    number: "03",
     title: "VAT & CIS",
-    href: "/services/vat-cis",
+    intro:
+      "Support with registrations, submissions and the practical compliance issues that sit behind VAT and CIS.",
     items: [
       "VAT registration",
       "VAT returns",
       "Making Tax Digital support",
-      "VAT advice",
+      "VAT treatment queries",
+      "Domestic reverse charge support",
       "CIS registrations",
-      "CIS returns",
+      "CIS monthly returns",
+      "Subcontractor verification support",
+      "CIS correction work",
+      "CIS suffered and reclaim support",
     ],
   },
   {
+    number: "04",
     title: "Payroll & Pensions",
-    href: "/services/payroll-pensions",
+    intro:
+      "Day-to-day payroll and workplace pension support for businesses employing staff or paying directors through PAYE.",
     items: [
-      "Payroll setup and processing",
+      "Payroll setup",
+      "Weekly and monthly payroll processing",
       "RTI submissions",
+      "FPS and EPS submissions",
+      "Starters and leavers",
       "P45s and P60s",
+      "Director payroll",
       "Workplace pension support",
-      "Auto enrolment administration",
+      "Auto-enrolment administration",
+      "NEST support",
+      "Payroll corrections and clean-up work",
     ],
   },
   {
-    title: "Business Advisory",
-    href: "/services/business-advisory",
+    number: "05",
+    title: "Management Reporting & Business Insight",
+    intro:
+      "More detailed reporting for businesses that want to understand performance rather than only review the year once it has finished.",
+    items: [
+      "Monthly management accounts",
+      "Management reporting packs",
+      "Board and director reporting",
+      "Power BI dashboards",
+      "Budgeting",
+      "Forecasting",
+      "Cash flow forecasting",
+      "KPI reporting",
+      "Variance analysis",
+      "Sales analysis",
+      "Gross margin analysis",
+      "Cost control reviews",
+      "Pricing analysis",
+      "Balance sheet analysis",
+      "Working capital analysis",
+      "Stock, WIP and raw material reporting",
+      "Trend and period comparison reporting",
+      "Financial commentary and performance explanations",
+    ],
+  },
+  {
+    number: "06",
+    title: "Business Advisory & Support",
+    intro:
+      "Practical support when a business is starting, changing, investing, funding growth or simply trying to make a better financial decision.",
     items: [
       "Business start-up support",
       "Company formation",
       "Director advice",
       "Profit reviews",
       "Cash flow planning",
-      "Budgeting",
-      "Finance process reviews",
       "Business performance reviews",
-      "Support with asset purchases and finance decisions",
-      "Support with pricing, margins and profitability",
-      "Invoice discounting facility support",
-      "HMRC investigation lead",
+      "Finance process reviews",
+      "Financial controls",
+      "Systems improvement",
+      "Support with asset purchases",
+      "Support with finance decisions",
+      "Pricing and profitability reviews",
+      "Invoice discounting and finance facility support",
+      "Property and business finance discussions",
+      "Support with business structure and remuneration decisions",
+      "HMRC enquiry and investigation support",
+      "Support for in-house finance teams and business owners",
     ],
   },
+];
+
+const approachPoints = [
   {
-    title: "Additional Finance Support",
-    href: "/services/additional-finance-support",
-    items: [
-      "Monthly management accounts",
-      "Board packs and reporting packs",
-      "Budgeting and forecasting",
-      "Cash flow forecasting",
-      "KPI reporting",
-      "Variance analysis",
-      "Cost control reviews",
-      "Sales and margin analysis",
-      "Pricing analysis",
-      "Stock, WIP and raw material reporting",
-      "Financial controls and process improvements",
-      "Systems improvement and reporting automation",
-      "Support for finance teams and business owners",
-    ],
+    title: "Start with what you need",
+    text: "Some clients need a specific service. Others want Puma involved across most of the finance function. The starting point is understanding what would actually be useful.",
+  },
+  {
+    title: "Keep the fundamentals right",
+    text: "Good reporting and advice only work when the underlying records are accurate, so bookkeeping, reconciliations and compliance remain an important part of the service.",
+  },
+  {
+    title: "Add insight where it helps",
+    text: "Where a business would benefit from better visibility, reporting can be developed around the figures, trends and decisions that matter most.",
   },
 ];
 
@@ -103,116 +155,325 @@ export default function ServicesPage() {
   return (
     <div>
 
-      {/* Hero */}
-      <section className="bg-brand-navy text-white">
-        <div className="max-w-6xl mx-auto px-6 py-20 text-center">
-          <p className="text-brand-gold font-semibold uppercase tracking-wide text-sm">
-            What We Offer
-          </p>
-          <h1 className="text-4xl sm:text-5xl font-bold mt-3">
-            Our Services
-          </h1>
-          <p className="mt-5 max-w-2xl mx-auto text-lg text-gray-300">
-            From compliance and bookkeeping to business planning and finance
-            support, we offer everything your business needs in one place.
-          </p>
+      {/* HERO */}
+      <section className="relative overflow-hidden bg-brand-purple-dark text-white">
+        <div className="absolute -top-28 -right-28 w-96 h-96 rounded-full bg-brand-purple opacity-35" />
+        <div className="absolute -bottom-40 left-1/4 w-96 h-96 rounded-full bg-brand-purple-mid opacity-15 blur-3xl" />
+
+        <div className="relative max-w-7xl mx-auto px-6 py-24 lg:py-32">
+          <div className="max-w-4xl">
+
+            <p className="text-brand-purple-soft font-semibold uppercase tracking-[0.25em] text-sm">
+              Our Services
+            </p>
+
+            <h1 className="mt-5 text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight">
+              Support for every stage
+              <span className="block text-brand-purple-soft">
+                of the financial process.
+              </span>
+            </h1>
+
+            <p className="mt-7 text-lg sm:text-xl text-white/70 max-w-3xl leading-relaxed">
+              From bookkeeping, tax and payroll to management reporting,
+              forecasting and wider business support, Puma can provide as much
+              or as little involvement as your business needs.
+            </p>
+
+          </div>
         </div>
       </section>
 
-      {/* Intro strip */}
-      <section className="border-b border-gray-200">
-        <div className="max-w-6xl mx-auto px-6 py-10 grid gap-6 sm:grid-cols-3 text-center">
-          {[
-            { stat: "6", label: "Service Areas" },
-            { stat: "Fixed", label: "Transparent Fees" },
-            { stat: "MTD", label: "Making Tax Digital Ready" },
-          ].map((item) => (
-            <div key={item.label}>
-              <p className="text-3xl font-bold text-brand-red">{item.stat}</p>
-              <p className="text-sm text-gray-600 mt-1">{item.label}</p>
+      {/* INTRO */}
+      <section className="bg-brand-cream">
+        <div className="max-w-7xl mx-auto px-6 py-24">
+
+          <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-14 lg:gap-24 items-start">
+
+            <div>
+              <p className="text-brand-purple font-semibold uppercase tracking-[0.2em] text-sm">
+                How We Help
+              </p>
+
+              <h2 className="mt-4 text-4xl sm:text-5xl font-bold text-brand-purple-dark leading-tight">
+                The essentials, the detail and the bigger picture.
+              </h2>
             </div>
-          ))}
+
+            <div className="space-y-6 text-lg text-brand-slate leading-relaxed">
+              <p>
+                Every business needs the fundamentals handled properly:
+                accurate records, tax compliance, payroll, VAT and year-end
+                accounts.
+              </p>
+
+              <p>
+                But as a business grows, those needs often develop. Owners may
+                want better reporting, clearer forecasts, more useful
+                performance information or simply someone to help work through
+                the financial impact of a decision.
+              </p>
+
+              <p>
+                Puma is designed to support both sides of that picture.
+              </p>
+            </div>
+
+          </div>
         </div>
       </section>
 
-      {/* Services grid */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
-        <div className="grid gap-8 md:grid-cols-2">
-          {services.map((service) => (
-            <div
-              key={service.title}
-              className="border border-gray-200 rounded-xl p-6 hover:shadow-md hover:border-brand-red transition-all flex flex-col"
-            >
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-1 h-8 bg-brand-red rounded" />
-                <h2 className="text-xl font-bold text-brand-navy">
-                  {service.title}
-                </h2>
-              </div>
-              <ul className="space-y-2 flex-1">
-                {service.items.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-2 text-sm text-gray-600"
+      {/* SERVICES */}
+      <section className="bg-white">
+        <div className="max-w-7xl mx-auto px-6 py-24">
+
+          <div className="grid gap-8 lg:grid-cols-2">
+
+            {services.map((service) => (
+              <div
+                key={service.title}
+                className="bg-brand-cream rounded-[2rem] p-8 sm:p-9 flex flex-col"
+              >
+                <div className="flex items-start justify-between gap-6">
+
+                  <div>
+                    <p className="text-brand-purple font-semibold">
+                      {service.number}
+                    </p>
+
+                    <h2 className="mt-4 text-3xl font-bold text-brand-purple-dark">
+                      {service.title}
+                    </h2>
+                  </div>
+
+                  <div className="w-12 h-12 rounded-2xl bg-brand-purple-soft flex-shrink-0" />
+                </div>
+
+                <p className="mt-5 text-brand-slate leading-relaxed">
+                  {service.intro}
+                </p>
+
+                <div className="mt-8 grid sm:grid-cols-2 gap-x-6 gap-y-3">
+                  {service.items.map((item) => (
+                    <div
+                      key={item}
+                      className="flex items-start gap-3 text-sm text-brand-slate"
+                    >
+                      <span className="w-2 h-2 rounded-full bg-brand-purple flex-shrink-0 mt-1.5" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-8 pt-6 border-t border-brand-purple-soft">
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center font-semibold text-brand-purple hover:text-brand-purple-dark transition-colors"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-brand-orange flex-shrink-0 mt-1.5" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-6 pt-5 border-t border-gray-100">
-                <Link
-                  href={service.href}
-                  className="inline-block bg-brand-red hover:bg-brand-orange transition-colors text-white text-sm font-medium px-5 py-2.5 rounded-md"
-                >
-                  Learn More →
-                </Link>
+                    Discuss this service
+                    <span className="ml-2">→</span>
+                  </Link>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+
+          </div>
         </div>
       </section>
 
-      {/* Additional finance support callout */}
-      <section className="bg-gray-50">
-        <div className="max-w-4xl mx-auto px-6 py-16 text-center">
-          <p className="text-brand-red font-semibold uppercase tracking-wide text-sm">
-            Need More?
-          </p>
-          <h2 className="text-2xl font-bold text-brand-navy mt-2">
-            Deeper Financial Support Available
-          </h2>
-          <p className="mt-4 text-gray-600 leading-relaxed max-w-2xl mx-auto">
-            Through our wider finance experience, Puma Business Services can
-            support businesses that need more detailed financial insight,
-            including management accounts, board packs, KPI reporting, and
-            finance team support. If you need something not listed above,
-            get in touch and we&apos;ll let you know if we can help.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-block mt-6 bg-brand-red hover:bg-brand-orange transition-colors text-white font-medium px-6 py-3 rounded-md"
-          >
-            Discuss Your Needs
-          </Link>
+      {/* REPORTING FEATURE */}
+      <section className="bg-brand-purple-dark text-white">
+        <div className="max-w-7xl mx-auto px-6 py-24">
+
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+            <div>
+              <p className="text-brand-purple-soft font-semibold uppercase tracking-[0.2em] text-sm">
+                Beyond Year-End Accounts
+              </p>
+
+              <h2 className="mt-4 text-4xl sm:text-5xl font-bold leading-tight">
+                Reporting designed around the way your business works.
+              </h2>
+
+              <p className="mt-6 text-lg text-white/70 leading-relaxed max-w-xl">
+                Management reporting does not need to mean receiving a large
+                spreadsheet every month. The aim is to identify the information
+                that is genuinely useful, present it clearly and explain what
+                has changed.
+              </p>
+
+              <p className="mt-4 text-lg text-white/70 leading-relaxed max-w-xl">
+                That could mean monthly profit reporting, comparisons with
+                previous periods, cash flow forecasts, KPI dashboards,
+                balance-sheet analysis or a more detailed reporting pack for
+                directors and management.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-5">
+
+              {[
+                ["Performance", "Understand revenue, costs, margins and profit movements."],
+                ["Cash", "See the effect of working capital, debtors, creditors and funding."],
+                ["Forecasts", "Look ahead using the latest available information."],
+                ["Decisions", "Use clearer financial information when planning what comes next."],
+              ].map(([title, text]) => (
+                <div
+                  key={title}
+                  className="bg-white/10 border border-white/10 rounded-3xl p-7"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-brand-purple mb-7" />
+
+                  <h3 className="text-xl font-bold">
+                    {title}
+                  </h3>
+
+                  <p className="mt-3 text-white/65 leading-relaxed text-sm">
+                    {text}
+                  </p>
+                </div>
+              ))}
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* APPROACH */}
+      <section className="bg-brand-lilac">
+        <div className="max-w-7xl mx-auto px-6 py-24">
+
+          <div className="text-center max-w-3xl mx-auto">
+            <p className="text-brand-purple font-semibold uppercase tracking-[0.2em] text-sm">
+              The Approach
+            </p>
+
+            <h2 className="mt-4 text-4xl sm:text-5xl font-bold text-brand-purple-dark">
+              Support built around the business.
+            </h2>
+
+            <p className="mt-5 text-lg text-brand-slate leading-relaxed">
+              There is no need to force every client into the same package.
+              The right level of involvement depends on the size, complexity
+              and needs of the business.
+            </p>
+          </div>
+
+          <div className="mt-14 grid md:grid-cols-3 gap-6">
+
+            {approachPoints.map((item, index) => (
+              <div
+                key={item.title}
+                className="bg-white rounded-3xl p-8 shadow-sm"
+              >
+                <p className="text-brand-purple font-semibold">
+                  0{index + 1}
+                </p>
+
+                <h3 className="mt-7 text-2xl font-bold text-brand-purple-dark">
+                  {item.title}
+                </h3>
+
+                <p className="mt-4 text-brand-slate leading-relaxed">
+                  {item.text}
+                </p>
+              </div>
+            ))}
+
+          </div>
+        </div>
+      </section>
+
+      {/* FLEXIBLE SUPPORT */}
+      <section className="bg-white">
+        <div className="max-w-7xl mx-auto px-6 py-24">
+
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+            <div>
+              <p className="text-brand-purple font-semibold uppercase tracking-[0.2em] text-sm">
+                Flexible Support
+              </p>
+
+              <h2 className="mt-4 text-4xl sm:text-5xl font-bold text-brand-purple-dark leading-tight">
+                Need help with something that is not listed?
+              </h2>
+
+              <p className="mt-6 text-lg text-brand-slate leading-relaxed max-w-xl">
+                Business finance rarely fits neatly into a checklist. If a
+                financial, accounting or reporting issue comes up that is not
+                listed above, get in touch and we can discuss whether Puma is
+                able to help.
+              </p>
+            </div>
+
+            <div className="bg-brand-cream rounded-[2rem] p-8 sm:p-10">
+              <p className="text-brand-purple-dark text-2xl font-bold">
+                Typical one-off support can include:
+              </p>
+
+              <div className="mt-7 space-y-4">
+                {[
+                  "Accounting software migrations and clean-up work",
+                  "Historic bookkeeping and reconciliation corrections",
+                  "HMRC correspondence and compliance issues",
+                  "Finance facility and funding discussions",
+                  "Asset purchase and finance considerations",
+                  "Business performance reviews",
+                  "Reporting system improvements",
+                  "Support with unusual accounting or tax queries",
+                ].map((item) => (
+                  <div
+                    key={item}
+                    className="flex items-start gap-3 text-brand-slate"
+                  >
+                    <span className="w-2 h-2 rounded-full bg-brand-purple flex-shrink-0 mt-2" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="bg-brand-navy">
-        <div className="max-w-6xl mx-auto px-6 py-16 text-center">
-          <h2 className="text-2xl font-bold text-white">
-            Not sure which service you need?
-          </h2>
-          <p className="text-gray-300 mt-3 max-w-lg mx-auto">
-            Drop us an email and we&apos;ll point you in the right direction — no obligation, no sales pitch.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-block mt-6 bg-brand-red hover:bg-brand-orange transition-colors text-white font-medium px-6 py-3 rounded-md"
-          >
-            Get in Touch
-          </Link>
+      <section className="bg-white pb-24">
+        <div className="max-w-7xl mx-auto px-6">
+
+          <div className="relative overflow-hidden bg-brand-purple rounded-[2.5rem] px-8 py-16 sm:px-14 sm:py-20 text-white">
+
+            <div className="absolute -right-20 -bottom-24 w-80 h-80 bg-brand-purple-soft/20 rounded-full" />
+            <div className="absolute -left-24 -top-32 w-72 h-72 bg-brand-purple-dark/20 rounded-full" />
+
+            <div className="relative max-w-3xl">
+
+              <p className="text-brand-purple-soft uppercase tracking-[0.2em] font-semibold text-sm">
+                Let's Talk
+              </p>
+
+              <h2 className="mt-4 text-4xl sm:text-5xl font-bold leading-tight">
+                Not sure what level of support you need?
+              </h2>
+
+              <p className="mt-5 text-lg text-white/75 max-w-2xl leading-relaxed">
+                Get in touch and we can talk through what you are looking for,
+                where the current pressure points are and which areas Puma may
+                be able to support.
+              </p>
+
+              <Link
+                href="/contact"
+                className="inline-block mt-8 bg-white text-brand-purple-dark hover:bg-brand-purple-soft transition-colors px-7 py-3.5 rounded-full font-semibold"
+              >
+                Discuss Your Needs
+              </Link>
+
+            </div>
+          </div>
         </div>
       </section>
 
