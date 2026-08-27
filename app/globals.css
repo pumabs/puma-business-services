@@ -6,6 +6,7 @@
   --background: #faf8fc;
   --foreground: #201a26;
 
+  /* New Puma purple palette */
   --brand-purple-dark: #24142f;
   --brand-purple: #5c2d78;
   --brand-purple-mid: #7b4a98;
@@ -17,6 +18,11 @@
   --brand-slate: #675f6d;
   --brand-white: #ffffff;
   --brand-cream: #f7f3f8;
+
+  /* Legacy names still used by Header/Footer/other pages */
+  --brand-navy: #24142f;
+  --brand-red: #5c2d78;
+  --brand-orange: #7b4a98;
 }
 
 @theme inline {
@@ -34,6 +40,11 @@
   --color-brand-slate: var(--brand-slate);
   --color-brand-white: var(--brand-white);
   --color-brand-cream: var(--brand-cream);
+
+  /* Keep existing site classes working */
+  --color-brand-navy: var(--brand-navy);
+  --color-brand-red: var(--brand-red);
+  --color-brand-orange: var(--brand-orange);
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
