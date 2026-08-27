@@ -3,40 +3,37 @@
 @custom-variant dark (&:where(.force-dark, .force-dark *));
 
 :root {
-  /* Core */
-  --background: #f8f7f4;
-  --foreground: #18202b;
+  --background: #faf8fc;
+  --foreground: #201a26;
 
-  /* Puma brand */
-  --brand-navy: #111723;
-  --brand-red: #cd202d;
-  --brand-orange: #eb5e2d;
-  --brand-gold: #d6a84b;
+  --brand-purple-dark: #24142f;
+  --brand-purple: #5c2d78;
+  --brand-purple-mid: #7b4a98;
+  --brand-purple-soft: #d9c6e5;
+  --brand-lilac: #f1eaf6;
 
-  /* Supporting palette */
-  --brand-cream: #f5f0e8;
-  --brand-sand: #e9e1d5;
-  --brand-light: #f1f4f6;
-  --brand-slate: #53606f;
-  --brand-charcoal: #242c37;
+  --brand-gold: #c7a45a;
+  --brand-charcoal: #2f2934;
+  --brand-slate: #675f6d;
   --brand-white: #ffffff;
+  --brand-cream: #f7f3f8;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  --color-brand-navy: var(--brand-navy);
-  --color-brand-red: var(--brand-red);
-  --color-brand-orange: var(--brand-orange);
-  --color-brand-gold: var(--brand-gold);
+  --color-brand-purple-dark: var(--brand-purple-dark);
+  --color-brand-purple: var(--brand-purple);
+  --color-brand-purple-mid: var(--brand-purple-mid);
+  --color-brand-purple-soft: var(--brand-purple-soft);
+  --color-brand-lilac: var(--brand-lilac);
 
-  --color-brand-cream: var(--brand-cream);
-  --color-brand-sand: var(--brand-sand);
-  --color-brand-light: var(--brand-light);
-  --color-brand-slate: var(--brand-slate);
+  --color-brand-gold: var(--brand-gold);
   --color-brand-charcoal: var(--brand-charcoal);
+  --color-brand-slate: var(--brand-slate);
   --color-brand-white: var(--brand-white);
+  --color-brand-cream: var(--brand-cream);
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -51,16 +48,11 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
-}
-
-/* Softer text rendering */
-body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Better text selection */
 ::selection {
-  background: var(--brand-orange);
+  background: var(--brand-purple);
   color: white;
 }
