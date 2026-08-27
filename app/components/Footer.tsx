@@ -67,9 +67,12 @@ export default function Footer() {
               daniel@puma-bs.co.uk
             </a>
 
-            <p className="mt-2 text-sm text-white/70">
-              Phone: 0000 000 0000
-            </p>
+            <a
+  href="tel:07891703489"
+  className="block mt-2 text-sm text-white/70 hover:text-white transition-colors"
+>
+  07891 703489
+</a>
 
             <Link
               href="/contact"
