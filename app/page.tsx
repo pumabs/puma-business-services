@@ -66,7 +66,7 @@ export default function Home() {
       <section className="bg-brand-navy text-white">
         <div className="max-w-6xl mx-auto px-6 py-24 sm:text-left text-center">
           <p className="text-brand-gold font-semibold uppercase tracking-wide text-sm">
-            Accountancy You Can Rely On
+            Accountancy Built Around Your Business
           </p>
           <h1 className="text-4xl sm:text-5xl font-bold leading-tight mt-3">
             Trusted Accountancy,{" "}
