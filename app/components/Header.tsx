@@ -16,7 +16,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-brand-purple-soft/40">
+    <header className="sticky top-0 z-50 bg-white border-b border-brand-purple-soft/40">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between min-h-[92px]">
 
