@@ -93,6 +93,51 @@ export const metadata: Metadata = {
   category: "accountancy",
 };
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "AccountingService",
+  "@id": "https://www.puma-bs.co.uk/#business",
+  name: "Puma Business Services Limited",
+  alternateName: "Puma Business Services",
+  url: "https://www.puma-bs.co.uk",
+  telephone: "+447891703489",
+  email: "daniel@puma-bs.co.uk",
+  description:
+    "Accountancy, tax, bookkeeping, payroll, management reporting and practical business support for businesses and individuals in Buxton, Derbyshire and beyond.",
+  areaServed: [
+    {
+      "@type": "City",
+      name: "Buxton",
+    },
+    {
+      "@type": "AdministrativeArea",
+      name: "Derbyshire",
+    },
+    {
+      "@type": "Country",
+      name: "United Kingdom",
+    },
+  ],
+  sameAs: [
+    "https://www.facebook.com/profile.php?id=61578176484448&locale=en_GB",
+    "https://www.linkedin.com/company/puma-business-services-ltd/",
+  ],
+  knowsAbout: [
+    "Accountancy",
+    "Tax",
+    "Bookkeeping",
+    "Payroll",
+    "VAT",
+    "CIS",
+    "Management Reporting",
+    "Power BI Reporting",
+    "Business Advisory",
+    "Xero",
+    "Sage",
+    "FreeAgent",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -104,6 +149,13 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
+        />
+
         <Header />
 
         <main className="flex-1">
