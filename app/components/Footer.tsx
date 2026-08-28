@@ -5,8 +5,9 @@ export default function Footer() {
 
   return (
     <footer className="mt-auto bg-brand-purple-dark text-white">
-      <div className="max-w-7xl mx-auto px-6 py-10">
+      <div className="max-w-7xl mx-auto px-6 py-8">
         <div className="grid gap-8 md:grid-cols-3 items-start">
+
           <div>
             <p className="text-brand-purple-soft font-semibold uppercase tracking-[0.18em] text-xs">
               Puma Business Services
@@ -76,65 +77,72 @@ export default function Footer() {
               Get in Touch
             </p>
 
-            <a
-              href="mailto:daniel@puma-bs.co.uk"
-              className="block mt-3 text-sm text-white/70 hover:text-white transition-colors"
-            >
-              daniel@puma-bs.co.uk
-            </a>
+            <div className="mt-3 flex flex-col xl:flex-row xl:items-center gap-4 xl:gap-6">
 
-            <a
-              href="tel:07891703489"
-              className="block mt-2 text-sm text-white/70 hover:text-white transition-colors"
-            >
-              07891 703489
-            </a>
-
-            <div className="flex items-center gap-3 mt-4">
-              <a
-                href="https://www.facebook.com/profile.php?id=61578176484448&locale=en_GB"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Puma Business Services on Facebook"
-                className="flex items-center justify-center w-9 h-9 rounded-full border border-white/20 text-white/70 hover:text-white hover:border-white/50 transition-colors"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  width="17"
-                  height="17"
-                  fill="currentColor"
-                  aria-hidden="true"
+              <div className="shrink-0">
+                <a
+                  href="mailto:daniel@puma-bs.co.uk"
+                  className="block text-sm text-white/70 hover:text-white transition-colors"
                 >
-                  <path d="M13.5 8.25V6.5c0-.84.56-1 1-1H17V2h-3c-3.33 0-4 2.5-4 4v2.25H8V12h2v10h3.5V12h2.75l.5-3.75H13.5Z" />
-                </svg>
-              </a>
+                  daniel@puma-bs.co.uk
+                </a>
 
-              <a
-                href="https://www.linkedin.com/company/puma-business-services-ltd/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Puma Business Services on LinkedIn"
-                className="flex items-center justify-center w-9 h-9 rounded-full border border-white/20 text-white/70 hover:text-white hover:border-white/50 transition-colors"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  width="17"
-                  height="17"
-                  fill="currentColor"
-                  aria-hidden="true"
+                <a
+                  href="tel:07891703489"
+                  className="block mt-2 text-sm text-white/70 hover:text-white transition-colors"
                 >
-                  <path d="M5.34 3.5A2.34 2.34 0 1 1 5.34 8.18a2.34 2.34 0 0 1 0-4.68ZM3.32 9.75h4.04V21H3.32V9.75Zm6.6 0h3.87v1.54h.06c.54-1.02 1.86-2.1 3.83-2.1 4.1 0 4.86 2.7 4.86 6.2V21H18.5v-4.97c0-1.19-.02-2.71-1.65-2.71-1.66 0-1.91 1.29-1.91 2.62V21H9.92V9.75Z" />
-                </svg>
-              </a>
+                  07891 703489
+                </a>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <a
+                  href="https://www.facebook.com/profile.php?id=61578176484448&locale=en_GB"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Puma Business Services on Facebook"
+                  className="flex items-center justify-center w-9 h-9 rounded-full border border-white/20 text-white/70 hover:text-white hover:border-white/50 transition-colors"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="17"
+                    height="17"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path d="M13.5 8.25V6.5c0-.84.56-1 1-1H17V2h-3c-3.33 0-4 2.5-4 4v2.25H8V12h2v10h3.5V12h2.75l.5-3.75H13.5Z" />
+                  </svg>
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/company/puma-business-services-ltd/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Puma Business Services on LinkedIn"
+                  className="flex items-center justify-center w-9 h-9 rounded-full border border-white/20 text-white/70 hover:text-white hover:border-white/50 transition-colors"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="17"
+                    height="17"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path d="M5.34 3.5A2.34 2.34 0 1 1 5.34 8.18a2.34 2.34 0 0 1 0-4.68ZM3.32 9.75h4.04V21H3.32V9.75Zm6.6 0h3.87v1.54h.06c.54-1.02 1.86-2.1 3.83-2.1 4.1 0 4.86 2.7 4.86 6.2V21H18.5v-4.97c0-1.19-.02-2.71-1.65-2.71-1.66 0-1.91 1.29-1.91 2.62V21H9.92V9.75Z" />
+                  </svg>
+                </a>
+
+                <Link
+                  href="/contact"
+                  className="ml-1 bg-brand-purple hover:bg-brand-purple-mid transition-colors text-white font-semibold px-5 py-2.5 rounded-full text-sm whitespace-nowrap"
+                >
+                  Contact Puma
+                </Link>
+              </div>
+
             </div>
-
-            <Link
-              href="/contact"
-              className="inline-block mt-4 bg-brand-purple hover:bg-brand-purple-mid transition-colors text-white font-semibold px-5 py-2.5 rounded-full text-sm"
-            >
-              Contact Puma
-            </Link>
           </div>
+
         </div>
       </div>
 
@@ -145,7 +153,9 @@ export default function Footer() {
               © {year} Puma Business Services Limited. All rights reserved.
             </p>
 
-            <p>Accountancy • Tax • Reporting • Business Support</p>
+            <p>
+              Accountancy • Tax • Reporting • Business Support
+            </p>
           </div>
 
           <p className="mt-3 leading-relaxed">
