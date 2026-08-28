@@ -86,17 +86,20 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-white/10 bg-[#180d20]">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row gap-2 sm:justify-between text-xs text-white/40">
-          <p>
-            © {year} Puma Business Services Limited. All rights reserved.
-          </p>
+<div className="border-t border-white/10 bg-[#180d20]">
+  <div className="max-w-7xl mx-auto px-6 py-4 text-xs text-white/40">
+    <div className="flex flex-col lg:flex-row gap-2 lg:justify-between">
+      <p>© {year} Puma Business Services Limited. All rights reserved.</p>
+      <p>Accountancy • Tax • Reporting • Business Support</p>
+    </div>
 
-          <p>
-            Accountancy • Tax • Reporting • Business Support
-          </p>
-        </div>
-      </div>
+    <p className="mt-3 leading-relaxed">
+      Puma Business Services Limited is registered in England and Wales.
+      Company No. 16289091. Registered Office: 29 Lansdowne Road, Buxton,
+      Derbyshire, SK17 6RR.
+    </p>
+  </div>
+</div>
 
     </footer>
   );
