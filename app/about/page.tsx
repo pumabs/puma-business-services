@@ -1,10 +1,11 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About | Puma Business Services",
   description:
-    "Learn more about Puma Business Services and our approach to accountancy, financial reporting and practical business support.",
+    "Learn more about Puma Business Services, founder Daniel Riley MAAT and our approach to accountancy, financial reporting and practical business support.",
 };
 
 const values = [
@@ -42,7 +43,6 @@ const supportAreas = [
 export default function AboutPage() {
   return (
     <div>
-
       {/* HERO */}
       <section className="relative overflow-hidden bg-brand-purple-dark text-white">
         <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-brand-purple opacity-30" />
@@ -50,7 +50,6 @@ export default function AboutPage() {
 
         <div className="relative max-w-7xl mx-auto px-6 py-16 lg:py-20">
           <div className="max-w-3xl">
-
             <p className="text-brand-purple-soft font-semibold uppercase tracking-[0.22em] text-xs sm:text-sm">
               About Puma
             </p>
@@ -67,7 +66,6 @@ export default function AboutPage() {
               businesses need with practical support, clear communication and
               a greater focus on understanding the numbers.
             </p>
-
           </div>
         </div>
       </section>
@@ -75,9 +73,7 @@ export default function AboutPage() {
       {/* OUR APPROACH */}
       <section className="bg-brand-cream">
         <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
-
           <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-16 items-start">
-
             <div>
               <p className="text-brand-purple font-semibold uppercase tracking-[0.18em] text-xs sm:text-sm">
                 Our Approach
@@ -89,7 +85,6 @@ export default function AboutPage() {
             </div>
 
             <div className="space-y-5 text-base sm:text-lg text-brand-slate leading-relaxed">
-
               <p>
                 Puma Business Services was built around a straightforward idea:
                 accountancy should be useful to the person running the
@@ -114,7 +109,6 @@ export default function AboutPage() {
                 accountancy with practical financial support that can develop
                 alongside the business.
               </p>
-
             </div>
           </div>
         </div>
@@ -123,7 +117,6 @@ export default function AboutPage() {
       {/* VALUES */}
       <section className="bg-white">
         <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
-
           <div className="max-w-3xl">
             <p className="text-brand-purple font-semibold uppercase tracking-[0.18em] text-xs sm:text-sm">
               What Matters
@@ -139,7 +132,6 @@ export default function AboutPage() {
           </div>
 
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-
             {values.map((value) => (
               <div
                 key={value.title}
@@ -158,64 +150,141 @@ export default function AboutPage() {
                 </p>
               </div>
             ))}
-
           </div>
         </div>
       </section>
 
-      {/* PERSONAL SERVICE */}
+      {/* MEET DAN */}
       <section className="bg-brand-purple-dark text-white">
         <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
+          <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-16 items-start">
+            <div>
+              <div className="relative overflow-hidden rounded-[2rem] aspect-[4/5] max-w-md mx-auto lg:max-w-none">
+                <Image
+                  src="/daniel-riley.jpg"
+                  alt="Daniel Riley, founder of Puma Business Services"
+                  fill
+                  className="object-cover object-[center_25%]"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                />
+              </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <div className="mt-6">
+                <p className="text-xl font-bold">Daniel Riley MAAT</p>
+                <p className="mt-1 text-white/55 text-sm">
+                  Founder, Puma Business Services
+                </p>
+              </div>
+            </div>
 
             <div>
               <p className="text-brand-purple-soft font-semibold uppercase tracking-[0.18em] text-xs sm:text-sm">
-                Personal Service
+                Meet Dan
               </p>
 
               <h2 className="mt-3 text-3xl sm:text-4xl font-bold leading-tight">
-                Know who you&apos;re dealing with.
+                Accountancy should be about more than looking backwards once a
+                year.
               </h2>
 
-              <p className="mt-5 text-base sm:text-lg text-white/70 leading-relaxed max-w-xl">
-                Building a good working relationship makes accountancy easier.
-                The more your accountant understands about the business, its
-                owners and what they are trying to achieve, the more useful
-                that support can become.
-              </p>
+              <div className="mt-7 space-y-5 text-base text-white/70 leading-relaxed">
+                <p>
+                  I&apos;m <strong className="text-white">Daniel Riley</strong>,
+                  an MAAT-qualified accountant with over ten years&apos;
+                  experience working in accounting and finance.
+                </p>
 
-              <p className="mt-4 text-base sm:text-lg text-white/70 leading-relaxed max-w-xl">
-                Puma takes a hands-on approach, with direct communication and
-                support that reflects the circumstances of the individual
-                client rather than forcing everyone into the same process.
-              </p>
-            </div>
+                <p>
+                  During that time, I&apos;ve worked with businesses at very
+                  different stages - from sole traders with low levels of
+                  turnover through to established limited companies turning
+                  over several million pounds.
+                </p>
 
-            <div className="grid sm:grid-cols-2 gap-4">
+                <p>
+                  One thing I&apos;ve heard far too often from business owners
+                  is that they only really hear from their accountant once a
+                  year. The financial year ends, the accounts are prepared
+                  months later, they&apos;re told what tax they need to pay, and
+                  that&apos;s often the extent of the relationship.
+                </p>
 
-              {[
-                ["Direct Contact", "Speak directly with the person looking after your accounts and financial matters."],
-                ["Clear Answers", "Questions explained in straightforward language without unnecessary jargon."],
-                ["Business Context", "Advice that takes account of what is actually happening within your business."],
-                ["Ongoing Support", "Help available throughout the year rather than only when a deadline approaches."],
-              ].map(([title, text]) => (
-                <div
-                  key={title}
-                  className="bg-white/10 border border-white/10 rounded-2xl p-5"
-                >
-                  <div className="w-9 h-9 bg-brand-purple rounded-xl mb-6" />
-
-                  <h3 className="font-bold text-lg">
-                    {title}
-                  </h3>
-
-                  <p className="text-white/60 mt-2 text-sm leading-relaxed">
-                    {text}
+                <div className="border-l-4 border-brand-purple-soft pl-5 py-1">
+                  <p className="text-xl sm:text-2xl font-bold text-white">
+                    I wanted Puma to offer something different.
                   </p>
                 </div>
-              ))}
 
+                <p>
+                  I believe the real value comes from understanding what&apos;s
+                  happening in a business throughout the year, while
+                  there&apos;s still an opportunity to do something with that
+                  information.
+                </p>
+
+                <p>
+                  That could mean understanding why profits or margins have
+                  changed, planning ahead for tax, improving cash flow,
+                  considering finance for the next investment, reviewing costs,
+                  or simply having someone to talk through a business decision
+                  with.
+                </p>
+
+                <p>
+                  My aim is to{" "}
+                  <strong className="text-white">
+                    partner with clients and understand their businesses
+                    properly
+                  </strong>
+                  , rather than simply process their accounts. The better I
+                  understand where a business is, where its owners want it to
+                  go, and the challenges they&apos;re facing, the more useful
+                  the support I can provide.
+                </p>
+
+                <p>
+                  That&apos;s also why I named the business{" "}
+                  <strong className="text-white">
+                    Puma Business Services
+                  </strong>
+                  , rather than Puma Accountants. Accountancy and tax are at
+                  the heart of what we do, but running a business involves much
+                  more than filing accounts. I wanted the name to reflect the
+                  wider financial and practical support Puma can provide as a
+                  business develops.
+                </p>
+              </div>
+
+              <div className="mt-8 bg-white/10 border border-white/10 rounded-2xl p-6 sm:p-7">
+                <p className="text-brand-purple-soft font-semibold uppercase tracking-[0.16em] text-xs">
+                  Why Puma?
+                </p>
+
+                <p className="mt-3 text-white/75 leading-relaxed">
+                  And <strong className="text-white">Puma</strong> itself has a
+                  personal meaning. I grew up in Buxton and played football for{" "}
+                  <strong className="text-white">Buxton Pumas FC</strong> from
+                  the age of five until sixteen. When it came to naming my own
+                  business years later, Puma was a nod back to something that
+                  had been a big part of my childhood and my connection to the
+                  local area.
+                </p>
+              </div>
+
+              <p className="mt-8 text-base text-white/70 leading-relaxed">
+                Ultimately, I want Puma to be the kind of accountant I believe
+                businesses are looking for -{" "}
+                <strong className="text-white">
+                  someone they can speak to throughout the year, who understands
+                  their business and genuinely wants to help them move it
+                  forward.
+                </strong>
+              </p>
+
+              <p className="mt-6 text-xl sm:text-2xl font-bold text-brand-purple-soft leading-snug">
+                Because filing the accounts should be part of the relationship
+                - not the relationship itself.
+              </p>
             </div>
           </div>
         </div>
@@ -224,9 +293,7 @@ export default function AboutPage() {
       {/* WHAT WE SUPPORT */}
       <section className="bg-brand-lilac">
         <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
-
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
             <div>
               <p className="text-brand-purple font-semibold uppercase tracking-[0.18em] text-xs sm:text-sm">
                 What We Support
@@ -238,8 +305,7 @@ export default function AboutPage() {
 
               <p className="mt-5 text-base sm:text-lg text-brand-slate leading-relaxed max-w-xl">
                 Support can range from individual compliance services through
-                to a much broader role across the financial side of a
-                business.
+                to a much broader role across the financial side of a business.
               </p>
 
               <p className="mt-4 text-base sm:text-lg text-brand-slate leading-relaxed max-w-xl">
@@ -256,7 +322,6 @@ export default function AboutPage() {
             </div>
 
             <div className="bg-white rounded-[2rem] p-7 sm:p-9">
-
               <div className="space-y-3">
                 {supportAreas.map((item, index) => (
                   <div
@@ -273,7 +338,6 @@ export default function AboutPage() {
                   </div>
                 ))}
               </div>
-
             </div>
           </div>
         </div>
@@ -282,9 +346,7 @@ export default function AboutPage() {
       {/* WHO WE WORK WITH */}
       <section className="bg-white">
         <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
-
           <div className="text-center max-w-3xl mx-auto">
-
             <p className="text-brand-purple font-semibold uppercase tracking-[0.18em] text-xs sm:text-sm">
               Who We Work With
             </p>
@@ -300,16 +362,26 @@ export default function AboutPage() {
               the starting point is understanding what your circumstances
               actually require.
             </p>
-
           </div>
 
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-
             {[
-              ["Individuals", "Tax and financial matters that need clear, practical support."],
-              ["Sole Traders", "Accounts, tax, bookkeeping and support as the business develops."],
-              ["Limited Companies", "Compliance, payroll, VAT, reporting and director support."],
-              ["Growing Businesses", "Deeper reporting, forecasting, analysis and wider financial support."],
+              [
+                "Individuals",
+                "Tax and financial matters that need clear, practical support.",
+              ],
+              [
+                "Sole Traders",
+                "Accounts, tax, bookkeeping and support as the business develops.",
+              ],
+              [
+                "Limited Companies",
+                "Compliance, payroll, VAT, reporting and director support.",
+              ],
+              [
+                "Growing Businesses",
+                "Deeper reporting, forecasting, analysis and wider financial support.",
+              ],
             ].map(([title, text]) => (
               <div
                 key={title}
@@ -324,7 +396,6 @@ export default function AboutPage() {
                 </p>
               </div>
             ))}
-
           </div>
         </div>
       </section>
@@ -332,14 +403,11 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="bg-white pb-16 lg:pb-20">
         <div className="max-w-7xl mx-auto px-6">
-
           <div className="relative overflow-hidden bg-brand-purple rounded-[2rem] px-7 py-12 sm:px-10 sm:py-14 text-white">
-
             <div className="absolute -right-16 -bottom-20 w-64 h-64 bg-brand-purple-soft/20 rounded-full" />
             <div className="absolute -left-20 -top-24 w-60 h-60 bg-brand-purple-dark/20 rounded-full" />
 
             <div className="relative max-w-3xl">
-
               <p className="text-brand-purple-soft uppercase tracking-[0.18em] font-semibold text-xs sm:text-sm">
                 Get in Touch
               </p>
@@ -350,8 +418,7 @@ export default function AboutPage() {
 
               <p className="mt-4 text-base sm:text-lg text-white/75 max-w-2xl leading-relaxed">
                 Tell us a little about you or your business and what you are
-                looking for. We can then discuss where Puma may be able to
-                help.
+                looking for. We can then discuss where Puma may be able to help.
               </p>
 
               <Link
@@ -360,12 +427,10 @@ export default function AboutPage() {
               >
                 Start a Conversation
               </Link>
-
             </div>
           </div>
         </div>
       </section>
-
     </div>
   );
 }
