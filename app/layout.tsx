@@ -15,8 +15,82 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Puma Business Services",
-  description: "Professional accountancy services you can trust.",
+  metadataBase: new URL("https://www.puma-bs.co.uk"),
+
+  title: {
+    default:
+      "Puma Business Services | Accountancy & Business Support in Buxton",
+    template: "%s | Puma Business Services",
+  },
+
+  description:
+    "Accountancy, tax, bookkeeping, payroll, management reporting and practical business support for businesses and individuals in Buxton, Derbyshire and beyond.",
+
+  applicationName: "Puma Business Services",
+
+  authors: [
+    {
+      name: "Puma Business Services Limited",
+    },
+  ],
+
+  creator: "Puma Business Services Limited",
+  publisher: "Puma Business Services Limited",
+
+  keywords: [
+    "accountant Buxton",
+    "accountants Buxton",
+    "accountancy Buxton",
+    "business accountant Buxton",
+    "tax accountant Buxton",
+    "bookkeeper Buxton",
+    "bookkeeping Buxton",
+    "payroll Buxton",
+    "VAT accountant",
+    "CIS accountant",
+    "management accounts",
+    "management reporting",
+    "Power BI reporting",
+    "business advisory",
+    "Xero accountant",
+    "Sage accountant",
+    "FreeAgent accountant",
+    "accountant Derbyshire",
+    "Puma Business Services",
+  ],
+
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    url: "https://www.puma-bs.co.uk",
+    siteName: "Puma Business Services",
+    title:
+      "Puma Business Services | Accountancy & Business Support in Buxton",
+    description:
+      "Accountancy, tax, bookkeeping, payroll, management reporting and practical business support in Buxton, Derbyshire and beyond.",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Puma Business Services | Accountancy & Business Support in Buxton",
+    description:
+      "Accountancy, tax, bookkeeping, payroll, management reporting and practical business support in Buxton, Derbyshire and beyond.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+
+  category: "accountancy",
 };
 
 export default function RootLayout({
@@ -26,12 +100,16 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="en-GB"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Header />
-        <main className="flex-1">{children}</main>
+
+        <main className="flex-1">
+          {children}
+        </main>
+
         <Footer />
       </body>
     </html>
