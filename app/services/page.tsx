@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Services | Puma Business Services",
   description:
-    "Accountancy, tax, bookkeeping, VAT, CIS, payroll, management reporting and practical business support from Puma Business Services.",
+    "Accountancy, tax, bookkeeping, VAT, CIS, payroll, management reporting, Virtual Finance Department and practical business support from Puma Business Services.",
 };
 
 const services = [
@@ -139,22 +139,21 @@ const services = [
 const approachPoints = [
   {
     title: "Start with what you need",
-    text: "Some clients need a specific service. Others want Puma involved across most of the finance function. The starting point is understanding what would actually be useful.",
+    text: "Some clients need a specific service. Others want Puma involved across much more of the finance function. The starting point is understanding what would actually be useful.",
   },
   {
     title: "Keep the fundamentals right",
     text: "Good reporting and advice only work when the underlying records are accurate, so bookkeeping, reconciliations and compliance remain an important part of the service.",
   },
   {
-    title: "Add insight where it helps",
-    text: "Where a business would benefit from better visibility, reporting can be developed around the figures, trends and decisions that matter most.",
+    title: "Develop as the business grows",
+    text: "The relationship can develop over time, adding reporting, forecasting, analysis and wider financial support when the business needs it.",
   },
 ];
 
 export default function ServicesPage() {
   return (
     <div>
-
       {/* HERO */}
       <section className="relative overflow-hidden bg-brand-purple-dark text-white">
         <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-brand-purple opacity-30" />
@@ -162,24 +161,22 @@ export default function ServicesPage() {
 
         <div className="relative max-w-7xl mx-auto px-6 py-16 lg:py-20">
           <div className="max-w-3xl">
-
             <p className="text-brand-purple-soft font-semibold uppercase tracking-[0.22em] text-xs sm:text-sm">
               Our Services
             </p>
 
             <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight">
-              Support for every stage
+              From accountancy essentials
               <span className="block text-brand-purple-soft">
-                of the financial process.
+                to your Virtual Finance Department.
               </span>
             </h1>
 
             <p className="mt-6 text-base sm:text-lg text-white/70 max-w-2xl leading-relaxed">
-              From bookkeeping, tax and payroll to management reporting,
-              forecasting and wider business support, Puma can provide as much
-              or as little involvement as your business needs.
+              From bookkeeping, accounts, tax and payroll through to management
+              reporting, forecasting and wider financial support, Puma can
+              provide as much or as little involvement as your business needs.
             </p>
-
           </div>
         </div>
       </section>
@@ -187,9 +184,7 @@ export default function ServicesPage() {
       {/* INTRO */}
       <section className="bg-brand-cream">
         <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
-
           <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-16 items-start">
-
             <div>
               <p className="text-brand-purple font-semibold uppercase tracking-[0.18em] text-xs sm:text-sm">
                 How We Help
@@ -208,17 +203,18 @@ export default function ServicesPage() {
               </p>
 
               <p>
-                But as a business grows, those needs often develop. Owners may
-                want better reporting, clearer forecasts, more useful
-                performance information or simply someone to help work through
-                the financial impact of a decision.
+                But the support does not have to stop there. As a business
+                develops, owners may want better reporting, clearer forecasts,
+                more useful performance information or someone to help work
+                through the financial impact of important decisions.
               </p>
 
               <p>
-                Puma is designed to support both sides of that picture.
+                Puma is designed to support both sides of that picture. You may
+                need help with one specific area, a combination of services, or
+                a much more involved financial partnership throughout the year.
               </p>
             </div>
-
           </div>
         </div>
       </section>
@@ -226,16 +222,28 @@ export default function ServicesPage() {
       {/* SERVICES GRID */}
       <section className="bg-white">
         <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
+          <div className="max-w-3xl mb-10">
+            <p className="text-brand-purple font-semibold uppercase tracking-[0.18em] text-xs sm:text-sm">
+              Core Services
+            </p>
+
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-brand-purple-dark">
+              Support where you need it.
+            </h2>
+
+            <p className="mt-4 text-base sm:text-lg text-brand-slate leading-relaxed">
+              Services can be provided individually or brought together as part
+              of a wider ongoing relationship.
+            </p>
+          </div>
 
           <div className="grid gap-6 lg:grid-cols-2">
-
             {services.map((service) => (
               <div
                 key={service.title}
                 className="bg-brand-cream rounded-[2rem] p-7 sm:p-8 flex flex-col"
               >
                 <div className="flex items-start justify-between gap-5">
-
                   <div>
                     <p className="text-brand-purple font-semibold text-sm">
                       {service.number}
@@ -276,67 +284,117 @@ export default function ServicesPage() {
                 </div>
               </div>
             ))}
-
           </div>
         </div>
       </section>
 
-      {/* REPORTING FEATURE */}
-      <section className="bg-brand-purple-dark text-white">
-        <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
+      {/* VIRTUAL FINANCE DEPARTMENT */}
+      <section className="relative overflow-hidden bg-brand-purple-dark text-white">
+        <div className="absolute -right-24 -top-24 w-80 h-80 rounded-full bg-brand-purple opacity-20" />
+        <div className="absolute -left-24 -bottom-32 w-80 h-80 rounded-full bg-brand-purple-mid opacity-10 blur-3xl" />
 
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
+        <div className="relative max-w-7xl mx-auto px-6 py-16 lg:py-20">
+          <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-16 items-center">
             <div>
               <p className="text-brand-purple-soft font-semibold uppercase tracking-[0.18em] text-xs sm:text-sm">
-                Beyond Year-End Accounts
+                Virtual Finance Department
               </p>
 
-              <h2 className="mt-3 text-3xl sm:text-4xl font-bold leading-tight">
-                Reporting designed around the way your business works.
+              <h2 className="mt-3 text-3xl sm:text-4xl font-bold leading-tight max-w-2xl">
+                Financial insight and support within your business, without
+                building a finance department in-house.
               </h2>
 
-              <p className="mt-5 text-base sm:text-lg text-white/70 leading-relaxed max-w-xl">
-                Management reporting does not need to mean receiving a large
-                spreadsheet every month. The aim is to identify the information
-                that is genuinely useful, present it clearly and explain what
-                has changed.
+              <p className="mt-5 text-base sm:text-lg text-white/70 leading-relaxed max-w-2xl">
+                For businesses that need more than traditional accountancy
+                support, Puma can act as an outsourced Virtual Finance
+                Department - working alongside you throughout the year and
+                becoming an extension of your business.
               </p>
 
-              <p className="mt-4 text-base sm:text-lg text-white/70 leading-relaxed max-w-xl">
-                That could mean monthly profit reporting, comparisons with
-                previous periods, cash flow forecasts, KPI dashboards,
-                balance-sheet analysis or a more detailed reporting pack for
-                directors and management.
+              <p className="mt-4 text-base sm:text-lg text-white/70 leading-relaxed max-w-2xl">
+                Rather than simply looking backwards once the financial year has
+                ended, the focus is on giving you useful financial information
+                while there is still time to act on it - helping you understand
+                performance, plan ahead and make better-informed decisions.
               </p>
+
+              <p className="mt-4 text-base sm:text-lg text-white/70 leading-relaxed max-w-2xl">
+                The level of involvement can be tailored to the business. For
+                some clients that may mean regular management reporting and
+                forecasting. For others it can extend into cash flow, finance,
+                systems, tax planning and ongoing support around the financial
+                decisions that arise throughout the year.
+              </p>
+
+              <Link
+                href="/contact"
+                className="inline-block mt-7 bg-white text-brand-purple-dark hover:bg-brand-purple-soft transition-colors px-6 py-3 rounded-full font-semibold text-sm"
+              >
+                Discuss Virtual Finance Support
+              </Link>
             </div>
 
             <div className="grid sm:grid-cols-2 gap-4">
-
               {[
-                ["Performance", "Understand revenue, costs, margins and profit movements."],
-                ["Cash", "See the effect of working capital, debtors, creditors and funding."],
-                ["Forecasts", "Look ahead using the latest available information."],
-                ["Decisions", "Use clearer financial information when planning what comes next."],
+                [
+                  "Understand",
+                  "Clear reporting around revenue, costs, margins, profit, cash and the figures that matter to your business.",
+                ],
+                [
+                  "Plan",
+                  "Forecasting, budgeting, tax planning and financial information to help you look ahead.",
+                ],
+                [
+                  "Decide",
+                  "Financial input when considering investment, funding, pricing, costs or other business decisions.",
+                ],
+                [
+                  "Develop",
+                  "Ongoing support that can grow alongside the business as its financial needs become more complex.",
+                ],
               ].map(([title, text]) => (
                 <div
                   key={title}
-                  className="bg-white/10 border border-white/10 rounded-2xl p-5"
+                  className="bg-white/10 border border-white/10 rounded-2xl p-6"
                 >
                   <div className="w-9 h-9 rounded-xl bg-brand-purple mb-6" />
 
-                  <h3 className="text-lg font-bold">
-                    {title}
-                  </h3>
+                  <h3 className="text-xl font-bold">{title}</h3>
 
                   <p className="mt-2 text-white/65 leading-relaxed text-sm">
                     {text}
                   </p>
                 </div>
               ))}
-
             </div>
+          </div>
 
+          <div className="mt-12 pt-10 border-t border-white/10">
+            <p className="text-brand-purple-soft font-semibold uppercase tracking-[0.16em] text-xs">
+              Your Finance Function
+            </p>
+
+            <div className="mt-5 grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-4">
+              {[
+                "Management accounts & reporting",
+                "Cash flow & forecasting",
+                "Profitability & margin analysis",
+                "Budgets & KPI reporting",
+                "Tax & remuneration planning",
+                "Business & asset finance support",
+                "Accounting systems & processes",
+                "Ongoing financial guidance",
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="flex items-start gap-3 text-white/70 text-sm"
+                >
+                  <span className="w-2 h-2 rounded-full bg-brand-purple-soft flex-shrink-0 mt-1.5" />
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -344,7 +402,6 @@ export default function ServicesPage() {
       {/* APPROACH */}
       <section className="bg-brand-lilac">
         <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
-
           <div className="text-center max-w-3xl mx-auto">
             <p className="text-brand-purple font-semibold uppercase tracking-[0.18em] text-xs sm:text-sm">
               The Approach
@@ -355,14 +412,13 @@ export default function ServicesPage() {
             </h2>
 
             <p className="mt-4 text-base sm:text-lg text-brand-slate leading-relaxed">
-              There is no need to force every client into the same package.
-              The right level of involvement depends on the size, complexity
-              and needs of the business.
+              There is no need to force every client into the same package. The
+              right level of involvement depends on the size, complexity and
+              needs of the business.
             </p>
           </div>
 
           <div className="mt-10 grid md:grid-cols-3 gap-5">
-
             {approachPoints.map((item, index) => (
               <div
                 key={item.title}
@@ -381,7 +437,6 @@ export default function ServicesPage() {
                 </p>
               </div>
             ))}
-
           </div>
         </div>
       </section>
@@ -389,9 +444,7 @@ export default function ServicesPage() {
       {/* FLEXIBLE SUPPORT */}
       <section className="bg-white">
         <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
-
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
             <div>
               <p className="text-brand-purple font-semibold uppercase tracking-[0.18em] text-xs sm:text-sm">
                 Flexible Support
@@ -435,7 +488,6 @@ export default function ServicesPage() {
                 ))}
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -443,14 +495,11 @@ export default function ServicesPage() {
       {/* CTA */}
       <section className="bg-white pb-16 lg:pb-20">
         <div className="max-w-7xl mx-auto px-6">
-
           <div className="relative overflow-hidden bg-brand-purple rounded-[2rem] px-7 py-12 sm:px-10 sm:py-14 text-white">
-
             <div className="absolute -right-16 -bottom-20 w-64 h-64 bg-brand-purple-soft/20 rounded-full" />
             <div className="absolute -left-20 -top-24 w-60 h-60 bg-brand-purple-dark/20 rounded-full" />
 
             <div className="relative max-w-3xl">
-
               <p className="text-brand-purple-soft uppercase tracking-[0.18em] font-semibold text-xs sm:text-sm">
                 Let&apos;s Talk
               </p>
@@ -471,12 +520,10 @@ export default function ServicesPage() {
               >
                 Discuss Your Needs
               </Link>
-
             </div>
           </div>
         </div>
       </section>
-
     </div>
   );
 }
