@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Facebook, Linkedin } from "lucide-react";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -12,9 +11,11 @@ export default function Footer() {
             <p className="text-brand-purple-soft font-semibold uppercase tracking-[0.18em] text-xs">
               Puma Business Services
             </p>
+
             <p className="mt-3 text-lg font-bold">
               Clear financial support.
             </p>
+
             <p className="mt-2 text-sm text-white/55 max-w-sm leading-relaxed">
               Accountancy, tax, reporting and practical business support.
             </p>
@@ -97,7 +98,15 @@ export default function Footer() {
                 aria-label="Puma Business Services on Facebook"
                 className="flex items-center justify-center w-9 h-9 rounded-full border border-white/20 text-white/70 hover:text-white hover:border-white/50 transition-colors"
               >
-                <Facebook size={17} />
+                <svg
+                  viewBox="0 0 24 24"
+                  width="17"
+                  height="17"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path d="M13.5 8.25V6.5c0-.84.56-1 1-1H17V2h-3c-3.33 0-4 2.5-4 4v2.25H8V12h2v10h3.5V12h2.75l.5-3.75H13.5Z" />
+                </svg>
               </a>
 
               <a
@@ -107,7 +116,15 @@ export default function Footer() {
                 aria-label="Puma Business Services on LinkedIn"
                 className="flex items-center justify-center w-9 h-9 rounded-full border border-white/20 text-white/70 hover:text-white hover:border-white/50 transition-colors"
               >
-                <Linkedin size={17} />
+                <svg
+                  viewBox="0 0 24 24"
+                  width="17"
+                  height="17"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path d="M5.34 3.5A2.34 2.34 0 1 1 5.34 8.18a2.34 2.34 0 0 1 0-4.68ZM3.32 9.75h4.04V21H3.32V9.75Zm6.6 0h3.87v1.54h.06c.54-1.02 1.86-2.1 3.83-2.1 4.1 0 4.86 2.7 4.86 6.2V21H18.5v-4.97c0-1.19-.02-2.71-1.65-2.71-1.66 0-1.91 1.29-1.91 2.62V21H9.92V9.75Z" />
+                </svg>
               </a>
             </div>
 
