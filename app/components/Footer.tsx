@@ -90,7 +90,16 @@ export default function Footer() {
   <div className="max-w-7xl mx-auto px-6 py-4 text-xs text-white/40">
     <div className="flex flex-col lg:flex-row gap-2 lg:justify-between">
       <p>© {year} Puma Business Services Limited. All rights reserved.</p>
-      <p>Accountancy • Tax • Reporting • Business Support</p>
+
+      <div className="flex flex-wrap gap-x-4 gap-y-1">
+        <p>Accountancy • Tax • Reporting • Business Support</p>
+        <Link
+          href="/privacy"
+          className="hover:text-white transition-colors"
+        >
+          Privacy Policy
+        </Link>
+      </div>
     </div>
 
     <p className="mt-3 leading-relaxed">
