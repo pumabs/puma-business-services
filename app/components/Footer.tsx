@@ -1,13 +1,19 @@
+"use client";
+
 import Link from "next/link";
 
 export default function Footer() {
   const year = new Date().getFullYear();
 
+  const reopenCookieSettings = () => {
+    localStorage.removeItem("puma-analytics-consent");
+    window.location.reload();
+  };
+
   return (
     <footer className="mt-auto bg-brand-purple-dark text-white">
       <div className="max-w-7xl mx-auto px-6 py-8">
         <div className="grid gap-8 md:grid-cols-3 items-start">
-
           <div>
             <p className="text-brand-purple-soft font-semibold uppercase tracking-[0.18em] text-xs">
               Puma Business Services
@@ -57,6 +63,13 @@ export default function Footer() {
               </Link>
 
               <Link
+                href="/updates"
+                className="text-white/65 hover:text-white transition-colors"
+              >
+                Updates
+              </Link>
+
+              <Link
                 href="/contact"
                 className="text-white/65 hover:text-white transition-colors"
               >
@@ -69,6 +82,21 @@ export default function Footer() {
               >
                 Privacy Policy
               </Link>
+
+              <Link
+                href="/cookies"
+                className="text-white/65 hover:text-white transition-colors"
+              >
+                Cookie Policy
+              </Link>
+
+              <button
+                type="button"
+                onClick={reopenCookieSettings}
+                className="text-left text-white/65 hover:text-white transition-colors"
+              >
+                Cookie Settings
+              </button>
             </div>
           </div>
 
@@ -78,7 +106,6 @@ export default function Footer() {
             </p>
 
             <div className="mt-3 flex flex-col xl:flex-row xl:items-center gap-4 xl:gap-6">
-
               <div className="shrink-0">
                 <a
                   href="mailto:daniel@puma-bs.co.uk"
@@ -139,10 +166,8 @@ export default function Footer() {
                   Contact Puma
                 </Link>
               </div>
-
             </div>
           </div>
-
         </div>
       </div>
 
