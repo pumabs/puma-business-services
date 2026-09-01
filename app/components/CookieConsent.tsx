@@ -18,15 +18,24 @@ declare global {
 function loadGoogleAnalytics() {
   if (typeof window === "undefined") return;
 
-  // Prevent Analytics being loaded more than once.
-  if (document.getElementById("puma-google-analytics")) return;
+  // Always initialise the Google data layer first.
+  window.dataLayer = window.dataLayer || [];
 
-window.gtag = function gtag(...args: unknown[]) {
-  window.dataLayer.push(args);
-};
+  // Use Google's expected gtag dataLayer format.
+  if (!window.gtag) {
+    window.gtag = function () {
+      window.dataLayer.push(arguments);
+    };
+  }
 
+  // Queue the Google Analytics configuration.
   window.gtag("js", new Date());
   window.gtag("config", MEASUREMENT_ID);
+
+  // Do not add the Google script more than once.
+  if (document.getElementById("puma-google-analytics")) {
+    return;
+  }
 
   const script = document.createElement("script");
   script.id = "puma-google-analytics";
@@ -41,9 +50,7 @@ export default function CookieConsent() {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    const savedConsent = localStorage.getItem(
-      CONSENT_KEY
-    ) as ConsentChoice;
+    const savedConsent = localStorage.getItem(CONSENT_KEY);
 
     if (savedConsent === "accepted") {
       setConsent("accepted");
