@@ -128,6 +128,69 @@ export default function UpdatesPage() {
 </a>
               </div>
             </article>
+            {/* BUSINESS UPDATE */}
+<article className="overflow-hidden bg-brand-purple-dark text-white rounded-[2rem] flex flex-col">
+  <div className="relative flex-1 min-h-[300px] sm:min-h-[360px] flex items-center justify-center p-10">
+    <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-brand-purple opacity-30" />
+    <div className="absolute -bottom-24 -left-20 w-64 h-64 rounded-full bg-brand-purple-mid opacity-20 blur-3xl" />
+
+    <div className="relative text-center">
+      <Image
+        src="/puma-icon.png"
+        alt=""
+        width={150}
+        height={150}
+        className="w-28 sm:w-36 h-auto mx-auto"
+      />
+
+      <p className="mt-7 text-brand-purple-soft font-semibold uppercase tracking-[0.18em] text-xs">
+        Puma Business Services
+      </p>
+
+      <p className="mt-3 text-2xl sm:text-3xl font-bold">
+        Accountancy • Tax • Reporting • Business Support
+      </p>
+    </div>
+  </div>
+
+  <div className="p-7 sm:p-8 bg-brand-cream text-brand-purple-dark">
+    <div className="flex flex-wrap items-center gap-3 text-xs sm:text-sm">
+      <span className="inline-flex items-center bg-brand-purple-soft text-brand-purple-dark font-semibold px-3 py-1.5 rounded-full">
+        Business
+      </span>
+
+      <span className="text-brand-slate">
+        1 September 2026
+      </span>
+    </div>
+
+    <h3 className="mt-5 text-2xl sm:text-3xl font-bold leading-tight">
+      Puma Business Services is now online!
+    </h3>
+
+    <p className="mt-4 text-brand-slate leading-relaxed">
+      We&apos;re pleased to launch the new Puma Business Services website,
+      bringing together our accountancy, tax, management reporting and
+      practical business support services in one place.
+    </p>
+
+    <p className="mt-3 text-brand-slate leading-relaxed">
+      The new website also explains more about our approach to working with
+      businesses throughout the year, rather than simply looking backwards
+      once the year-end has passed.
+    </p>
+
+    <a
+      href="https://www.linkedin.com/posts/puma-business-services-ltd_puma-business-services-accountancy-business-activity-7500470518781808642-lPOd?utm_source=share&utm_medium=member_desktop&rcm=ACoAABaP47cBB7z4AzqzhJpkp5U2NI2MQp1hMdY"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center mt-6 font-semibold text-brand-purple hover:text-brand-purple-dark transition-colors text-sm"
+    >
+      View on LinkedIn
+      <span className="ml-2">→</span>
+    </a>
+  </div>
+</article>
           </div>
         </div>
       </section>
