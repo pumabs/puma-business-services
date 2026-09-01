@@ -135,18 +135,47 @@ export default function PrivacyPage() {
               </p>
             </div>
 
-            <div>
-              <h2 className="text-2xl font-bold text-brand-purple-dark">
-                Website and Cookies
-              </h2>
-              <p className="mt-4">
-                This website may use cookies or similar technologies that are
-                necessary for the website to function correctly. If we
-                introduce optional analytics, advertising or other
-                non-essential tracking technologies, we will update our
-                approach to cookies and consent as appropriate.
-              </p>
-            </div>
+<div>
+  <h2 className="text-2xl font-bold text-brand-purple-dark">
+    Website, Cookies and Analytics
+  </h2>
+
+  <p className="mt-4">
+    This website uses limited browser storage to remember your
+    cookie and analytics preference.
+  </p>
+
+  <p className="mt-4">
+    If you choose to accept analytics, we use Google Analytics 4
+    to help us understand how visitors use the website. This may
+    include information such as pages viewed, approximate location,
+    device and browser information, traffic source and website
+    interactions.
+  </p>
+
+  <p className="mt-4">
+    Google Analytics is not loaded unless you choose to accept
+    analytics through our cookie banner.
+  </p>
+
+  <p className="mt-4">
+    We do not currently use advertising cookies, remarketing
+    cookies or social media tracking pixels on this website.
+  </p>
+
+  <p className="mt-4">
+    Further information about the cookies and analytics technologies
+    used on this website, and how you can manage your choice, is
+    available in our{" "}
+    <Link
+      href="/cookies"
+      className="font-semibold text-brand-purple hover:text-brand-purple-mid transition-colors"
+    >
+      Cookie Policy
+    </Link>
+    .
+  </p>
+</div>
 
             <div>
               <h2 className="text-2xl font-bold text-brand-purple-dark">
