@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -50,10 +51,9 @@ export default function UpdatesPage() {
 
             <div className="space-y-5 text-base sm:text-lg text-brand-slate leading-relaxed">
               <p>
-                This is where we&apos;ll share what&apos;s happening at Puma
-                Business Services, from business developments and useful
-                financial insights to local sponsorships and community
-                involvement.
+                This is where we share what&apos;s happening at Puma Business
+                Services, from business developments and useful financial
+                insights to local sponsorships and community involvement.
               </p>
 
               <p>
@@ -66,66 +66,64 @@ export default function UpdatesPage() {
         </div>
       </section>
 
-      {/* UPDATES */}
+      {/* LATEST UPDATES */}
       <section className="bg-white">
         <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
-          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5">
-            <div>
-              <p className="text-brand-purple font-semibold uppercase tracking-[0.18em] text-xs sm:text-sm">
-                Latest
-              </p>
+          <div>
+            <p className="text-brand-purple font-semibold uppercase tracking-[0.18em] text-xs sm:text-sm">
+              Latest
+            </p>
 
-              <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-brand-purple-dark">
-                Latest updates.
-              </h2>
-            </div>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-brand-purple-dark">
+              Latest updates.
+            </h2>
           </div>
 
-          {/* EMPTY STATE - replaced as genuine updates are published */}
-          <div className="mt-10 bg-brand-cream rounded-[2rem] p-8 sm:p-10 lg:p-12">
-            <div className="max-w-2xl">
-              <div className="w-12 h-12 rounded-2xl bg-brand-purple-soft" />
-
-              <h3 className="mt-6 text-2xl sm:text-3xl font-bold text-brand-purple-dark">
-                Updates coming soon.
-              </h3>
-
-              <p className="mt-4 text-brand-slate leading-relaxed text-base sm:text-lg">
-                We&apos;re getting this section ready to share the latest from
-                Puma, including business news, community involvement,
-                sponsorships and useful financial updates.
-              </p>
-
-              <p className="mt-4 text-brand-slate leading-relaxed">
-                In the meantime, you can follow Puma Business Services on
-                LinkedIn and Facebook or get in touch directly.
-              </p>
-
-              <div className="mt-7 flex flex-wrap gap-3">
-                <a
-                  href="https://www.linkedin.com/company/puma-business-services-ltd/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center bg-brand-purple text-white hover:bg-brand-purple-mid transition-colors px-6 py-3 rounded-full font-semibold text-sm"
-                >
-                  Follow on LinkedIn
-                </a>
-
-                <a
-                  href="https://www.facebook.com/profile.php?id=61578176484448&locale=en_GB"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center border border-brand-purple-soft text-brand-purple-dark hover:bg-brand-lilac transition-colors px-6 py-3 rounded-full font-semibold text-sm"
-                >
-                  Follow on Facebook
-                </a>
+          <div className="mt-10 grid lg:grid-cols-2 gap-6">
+            {/* COMMUNITY UPDATE */}
+            <article className="overflow-hidden bg-brand-cream rounded-[2rem]">
+              <div className="relative aspect-[16/10]">
+                <Image
+                  src="/school-community-support.jpg"
+                  alt="Puma Business Services supporting a local school fundraising event"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
               </div>
-            </div>
+
+              <div className="p-7 sm:p-8">
+                <div className="flex flex-wrap items-center gap-3 text-xs sm:text-sm">
+                  <span className="inline-flex items-center bg-brand-purple-soft text-brand-purple-dark font-semibold px-3 py-1.5 rounded-full">
+                    Community
+                  </span>
+
+                  <span className="text-brand-slate">
+                    25 June 2026
+                  </span>
+                </div>
+
+                <h3 className="mt-5 text-2xl sm:text-3xl font-bold text-brand-purple-dark leading-tight">
+                  Supporting one of our local schools
+                </h3>
+
+                <p className="mt-4 text-brand-slate leading-relaxed">
+                  Puma Business Services was pleased to support a local school
+                  fundraising event, alongside other local businesses who
+                  kindly contributed prizes and donations.
+                </p>
+
+                <p className="mt-3 text-brand-slate leading-relaxed">
+                  It&apos;s always great to be able to support organisations in
+                  our local community.
+                </p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
 
-      {/* WHAT WE'LL SHARE */}
+      {/* WHAT WE SHARE */}
       <section className="bg-brand-lilac">
         <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
           <div className="text-center max-w-3xl mx-auto">
@@ -176,8 +174,53 @@ export default function UpdatesPage() {
         </div>
       </section>
 
+      {/* SOCIAL */}
+      <section className="bg-white">
+        <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
+          <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-16 items-center">
+            <div>
+              <p className="text-brand-purple font-semibold uppercase tracking-[0.18em] text-xs sm:text-sm">
+                Follow Puma
+              </p>
+
+              <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-brand-purple-dark leading-tight">
+                Keep up with Puma on social media.
+              </h2>
+            </div>
+
+            <div>
+              <p className="text-base sm:text-lg text-brand-slate leading-relaxed">
+                You can also follow Puma Business Services on LinkedIn and
+                Facebook for the latest business, community and company
+                updates.
+              </p>
+
+              <div className="mt-6 flex flex-wrap gap-3">
+                <a
+                  href="https://www.linkedin.com/company/puma-business-services-ltd/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center bg-brand-purple text-white hover:bg-brand-purple-mid transition-colors px-6 py-3 rounded-full font-semibold text-sm"
+                >
+                  Follow on LinkedIn
+                </a>
+
+                <a
+                  href="https://www.facebook.com/profile.php?id=61578176484448&locale=en_GB"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center border border-brand-purple-soft text-brand-purple-dark hover:bg-brand-lilac transition-colors px-6 py-3 rounded-full font-semibold text-sm"
+                >
+                  Follow on Facebook
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
-      <section className="bg-white py-16 lg:py-20">
+      <section className="bg-white pb-16 lg:pb-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="relative overflow-hidden bg-brand-purple rounded-[2rem] px-7 py-12 sm:px-10 sm:py-14 text-white">
             <div className="absolute -right-16 -bottom-20 w-64 h-64 bg-brand-purple-soft/20 rounded-full" />
@@ -185,17 +228,16 @@ export default function UpdatesPage() {
 
             <div className="relative max-w-3xl">
               <p className="text-brand-purple-soft uppercase tracking-[0.18em] font-semibold text-xs sm:text-sm">
-                Keep in Touch
+                Let&apos;s Talk
               </p>
 
               <h2 className="mt-3 text-3xl sm:text-4xl font-bold leading-tight">
-                Want to know more about Puma?
+                Looking for more from your accountant?
               </h2>
 
               <p className="mt-4 text-base sm:text-lg text-white/75 max-w-2xl leading-relaxed">
-                Whether you&apos;ve seen something here that interests you or
-                you&apos;d like to discuss how Puma could support your
-                business, get in touch.
+                If you&apos;d like to find out more about Puma and how we could
+                support your business, get in touch for a conversation.
               </p>
 
               <Link
