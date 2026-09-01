@@ -117,6 +117,15 @@ export default function UpdatesPage() {
                   It&apos;s always great to be able to support organisations in
                   our local community.
                 </p>
+                <a
+  href="https://www.facebook.com/permalink.php?story_fbid=pfbid07PBFkM8HmN6yNNKTLXL8tBxEJUoFLAuhab4QD62QKoXQU9VyYQZBoRpULAKcG91Al&id=61578176484448&locale=en_GB"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center mt-6 font-semibold text-brand-purple hover:text-brand-purple-dark transition-colors text-sm"
+>
+  View on Facebook
+  <span className="ml-2">→</span>
+</a>
               </div>
             </article>
           </div>
