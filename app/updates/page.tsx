@@ -135,13 +135,15 @@ export default function UpdatesPage() {
     <div className="absolute -bottom-24 -left-20 w-64 h-64 rounded-full bg-brand-purple-mid opacity-20 blur-3xl" />
 
     <div className="relative text-center">
-      <Image
-        src="/puma-icon.png"
-        alt=""
-        width={150}
-        height={150}
-        className="w-28 sm:w-36 h-auto mx-auto"
-      />
+<div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto rounded-full bg-white flex items-center justify-center shadow-lg">
+  <Image
+    src="/puma-icon.png"
+    alt="Puma Business Services"
+    width={150}
+    height={150}
+    className="w-24 sm:w-32 h-auto"
+  />
+</div>
 
       <p className="mt-7 text-brand-purple-soft font-semibold uppercase tracking-[0.18em] text-xs">
         Puma Business Services
