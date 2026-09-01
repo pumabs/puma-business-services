@@ -8,12 +8,13 @@ import { Menu, X } from "lucide-react";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About Us" },
-    { href: "/services", label: "Services" },
-    { href: "/testimonials", label: "Testimonials" },
-  ];
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About Us" },
+  { href: "/services", label: "Services" },
+  { href: "/testimonials", label: "Testimonials" },
+  { href: "/updates", label: "Updates" },
+];
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-brand-purple-soft/40">
