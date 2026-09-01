@@ -1,0 +1,213 @@
+import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Latest from Puma | Puma Business Services",
+  description:
+    "Latest news, business updates, community involvement and sponsorship stories from Puma Business Services.",
+};
+
+export default function UpdatesPage() {
+  return (
+    <div>
+      {/* HERO */}
+      <section className="relative overflow-hidden bg-brand-purple-dark text-white">
+        <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-brand-purple opacity-30" />
+        <div className="absolute -bottom-28 left-1/3 w-72 h-72 rounded-full bg-brand-purple-mid opacity-15 blur-3xl" />
+
+        <div className="relative max-w-7xl mx-auto px-6 py-16 lg:py-20">
+          <div className="max-w-3xl">
+            <p className="text-brand-purple-soft font-semibold uppercase tracking-[0.22em] text-xs sm:text-sm">
+              Updates
+            </p>
+
+            <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight">
+              Latest from
+              <span className="block text-brand-purple-soft">Puma.</span>
+            </h1>
+
+            <p className="mt-6 text-base sm:text-lg text-white/70 max-w-2xl leading-relaxed">
+              Business updates, community involvement, sponsorship news and
+              useful insights from Puma Business Services.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* INTRO */}
+      <section className="bg-brand-cream">
+        <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
+          <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-16 items-start">
+            <div>
+              <p className="text-brand-purple font-semibold uppercase tracking-[0.18em] text-xs sm:text-sm">
+                Puma Updates
+              </p>
+
+              <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-brand-purple-dark leading-tight">
+                More than just accounting updates.
+              </h2>
+            </div>
+
+            <div className="space-y-5 text-base sm:text-lg text-brand-slate leading-relaxed">
+              <p>
+                This is where we&apos;ll share what&apos;s happening at Puma
+                Business Services, from business developments and useful
+                financial insights to local sponsorships and community
+                involvement.
+              </p>
+
+              <p>
+                We&apos;ll also use this space to share some of the work going
+                on behind the scenes and the things we think may be useful or
+                interesting to the businesses we work with.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* UPDATES */}
+      <section className="bg-white">
+        <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5">
+            <div>
+              <p className="text-brand-purple font-semibold uppercase tracking-[0.18em] text-xs sm:text-sm">
+                Latest
+              </p>
+
+              <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-brand-purple-dark">
+                Latest updates.
+              </h2>
+            </div>
+          </div>
+
+          {/* EMPTY STATE - replaced as genuine updates are published */}
+          <div className="mt-10 bg-brand-cream rounded-[2rem] p-8 sm:p-10 lg:p-12">
+            <div className="max-w-2xl">
+              <div className="w-12 h-12 rounded-2xl bg-brand-purple-soft" />
+
+              <h3 className="mt-6 text-2xl sm:text-3xl font-bold text-brand-purple-dark">
+                Updates coming soon.
+              </h3>
+
+              <p className="mt-4 text-brand-slate leading-relaxed text-base sm:text-lg">
+                We&apos;re getting this section ready to share the latest from
+                Puma, including business news, community involvement,
+                sponsorships and useful financial updates.
+              </p>
+
+              <p className="mt-4 text-brand-slate leading-relaxed">
+                In the meantime, you can follow Puma Business Services on
+                LinkedIn and Facebook or get in touch directly.
+              </p>
+
+              <div className="mt-7 flex flex-wrap gap-3">
+                <a
+                  href="https://www.linkedin.com/company/puma-business-services-ltd/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center bg-brand-purple text-white hover:bg-brand-purple-mid transition-colors px-6 py-3 rounded-full font-semibold text-sm"
+                >
+                  Follow on LinkedIn
+                </a>
+
+                <a
+                  href="https://www.facebook.com/profile.php?id=61578176484448&locale=en_GB"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center border border-brand-purple-soft text-brand-purple-dark hover:bg-brand-lilac transition-colors px-6 py-3 rounded-full font-semibold text-sm"
+                >
+                  Follow on Facebook
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WHAT WE'LL SHARE */}
+      <section className="bg-brand-lilac">
+        <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
+          <div className="text-center max-w-3xl mx-auto">
+            <p className="text-brand-purple font-semibold uppercase tracking-[0.18em] text-xs sm:text-sm">
+              What You&apos;ll Find Here
+            </p>
+
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-brand-purple-dark">
+              News, insights and life at Puma.
+            </h2>
+          </div>
+
+          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {[
+              [
+                "Business",
+                "Updates from Puma and developments in the services we provide.",
+              ],
+              [
+                "Insights",
+                "Practical financial and accounting topics that may be useful to business owners.",
+              ],
+              [
+                "Community",
+                "Local involvement and the businesses, organisations and people we support.",
+              ],
+              [
+                "Sponsorship",
+                "Updates from Puma sponsorships and the difference that support is helping to make.",
+              ],
+            ].map(([title, text]) => (
+              <div
+                key={title}
+                className="bg-white rounded-2xl p-7 shadow-sm"
+              >
+                <div className="w-10 h-10 rounded-2xl bg-brand-purple-soft" />
+
+                <h3 className="mt-6 text-xl font-bold text-brand-purple-dark">
+                  {title}
+                </h3>
+
+                <p className="mt-3 text-brand-slate leading-relaxed text-sm">
+                  {text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-white py-16 lg:py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="relative overflow-hidden bg-brand-purple rounded-[2rem] px-7 py-12 sm:px-10 sm:py-14 text-white">
+            <div className="absolute -right-16 -bottom-20 w-64 h-64 bg-brand-purple-soft/20 rounded-full" />
+            <div className="absolute -left-20 -top-24 w-60 h-60 bg-brand-purple-dark/20 rounded-full" />
+
+            <div className="relative max-w-3xl">
+              <p className="text-brand-purple-soft uppercase tracking-[0.18em] font-semibold text-xs sm:text-sm">
+                Keep in Touch
+              </p>
+
+              <h2 className="mt-3 text-3xl sm:text-4xl font-bold leading-tight">
+                Want to know more about Puma?
+              </h2>
+
+              <p className="mt-4 text-base sm:text-lg text-white/75 max-w-2xl leading-relaxed">
+                Whether you&apos;ve seen something here that interests you or
+                you&apos;d like to discuss how Puma could support your
+                business, get in touch.
+              </p>
+
+              <Link
+                href="/contact"
+                className="inline-block mt-6 bg-white text-brand-purple-dark hover:bg-brand-purple-soft transition-colors px-6 py-3 rounded-full font-semibold text-sm"
+              >
+                Get in Touch
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
