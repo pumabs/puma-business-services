@@ -190,7 +190,7 @@ export default function AboutPage() {
               <div className="mt-7 space-y-5 text-base text-white/70 leading-relaxed">
                 <p>
                   I&apos;m <strong className="text-white">Daniel Riley</strong>,
-                  an MAAT-qualified accountant with over ten years&apos;
+                  an MAAT-qualified accountant with over ten years of
                   experience working in accounting and finance.
                 </p>
 
