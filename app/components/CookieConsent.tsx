@@ -21,10 +21,9 @@ function loadGoogleAnalytics() {
   // Prevent Analytics being loaded more than once.
   if (document.getElementById("puma-google-analytics")) return;
 
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = function gtag(...args: unknown[]) {
-    window.dataLayer.push(args);
-  };
+window.gtag = function gtag(...args: unknown[]) {
+  window.dataLayer.push(arguments);
+};
 
   window.gtag("js", new Date());
   window.gtag("config", MEASUREMENT_ID);
