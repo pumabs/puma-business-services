@@ -22,7 +22,7 @@ function loadGoogleAnalytics() {
   if (document.getElementById("puma-google-analytics")) return;
 
 window.gtag = function gtag(...args: unknown[]) {
-  window.dataLayer.push(arguments);
+  window.dataLayer.push(args);
 };
 
   window.gtag("js", new Date());
