@@ -264,7 +264,7 @@ export default function AboutPage() {
                   And <strong className="text-white">Puma</strong> itself has a
                   personal meaning. I grew up in Buxton and played football for{" "}
                   <strong className="text-white">Buxton Pumas FC</strong> from
-                  the age of five until sixteen. When it came to naming my own
+                  the age of six until sixteen. When it came to naming my own
                   business years later, Puma was a nod back to something that
                   had been a big part of my childhood and my connection to the
                   local area.
