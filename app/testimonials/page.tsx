@@ -4,13 +4,12 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Testimonials | Puma Business Services",
   description:
-    "Client feedback on working with Puma Business Services for accountancy and business support.",
+    "Feedback and testimonials from people who have worked with Puma Business Services for accountancy, finance and business support.",
 };
 
 export default function TestimonialsPage() {
   return (
     <div>
-
       {/* HERO */}
       <section className="relative overflow-hidden bg-brand-purple-dark text-white">
         <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-brand-purple opacity-30" />
@@ -30,19 +29,18 @@ export default function TestimonialsPage() {
             </h1>
 
             <p className="mt-6 text-base sm:text-lg text-white/70 max-w-2xl leading-relaxed">
-              Good relationships matter. Here&apos;s what people we've worked with have to say
-              about their experience with Puma Business Services.
+              Good relationships matter. Here&apos;s what people we&apos;ve
+              worked with have to say about their experience with Puma Business
+              Services.
             </p>
           </div>
         </div>
       </section>
 
-      {/* FEATURED TESTIMONIAL */}
+      {/* PEAK PRECISION TESTIMONIAL */}
       <section className="bg-white">
         <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
-
           <div className="grid lg:grid-cols-[0.7fr_1.3fr] gap-10 lg:gap-16 items-start">
-
             <div>
               <p className="text-brand-purple font-semibold uppercase tracking-[0.18em] text-xs sm:text-sm">
                 Peak Precision Football
@@ -94,15 +92,79 @@ export default function TestimonialsPage() {
                 </p>
               </div>
             </div>
-
           </div>
         </div>
       </section>
 
-      {/* WHAT CLIENTS CAN EXPECT */}
+      {/* ADVANCE FINANCE & LEASING TESTIMONIAL */}
+      <section className="bg-brand-cream">
+        <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
+          <div className="grid lg:grid-cols-[0.7fr_1.3fr] gap-10 lg:gap-16 items-start">
+            <div>
+              <p className="text-brand-purple font-semibold uppercase tracking-[0.18em] text-xs sm:text-sm">
+                Advance Finance &amp; Leasing
+              </p>
+
+              <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-brand-purple-dark leading-tight">
+                Technical knowledge. Professional approach. Trusted relationships.
+              </h2>
+
+              <p className="mt-5 text-base sm:text-lg text-brand-slate leading-relaxed">
+                Dan has worked with Mark Evans of Advance Finance &amp; Leasing
+                over a number of years on asset finance transactions, including
+                technically complex arrangements involving imported assets from
+                mainland Europe.
+              </p>
+
+              <p className="mt-4 text-base sm:text-lg text-brand-slate leading-relaxed">
+                Mark&apos;s feedback provides an independent professional
+                perspective on Dan&apos;s knowledge, attention to detail and
+                approach to working alongside other advisers and finance
+                providers.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-[2rem] p-7 sm:p-9 lg:p-10">
+              <span className="text-6xl leading-none text-brand-purple-soft font-serif">
+                “
+              </span>
+
+              <blockquote className="text-lg sm:text-xl text-brand-purple-dark font-medium leading-relaxed -mt-2">
+                I have worked with Dan over the past 5 years, specifically on a
+                number of technically complex asset finance transactions
+                involving imported assets from mainland Europe.
+              </blockquote>
+
+              <p className="mt-5 text-brand-slate leading-relaxed text-sm sm:text-base">
+                I have found Dan in all my dealings to be excellent to work
+                with and very professional and proficient in all aspects of his
+                approach. He is very knowledgeable, with good attention to
+                detail, whilst also having a very friendly and approachable
+                manner.
+              </p>
+
+              <p className="mt-4 text-brand-slate leading-relaxed text-sm sm:text-base">
+                I really enjoy working with Dan and I am happy to fully endorse
+                and recommend his services.
+              </p>
+
+              <div className="mt-6 pt-5 border-t border-brand-purple-soft">
+                <p className="font-bold text-brand-purple-dark">
+                  Mark Evans MBA
+                </p>
+
+                <p className="text-sm text-brand-slate mt-1">
+                  Commercial Director, Advance Finance &amp; Leasing Ltd
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* THE PUMA APPROACH */}
       <section className="bg-brand-lilac">
         <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
-
           <div className="text-center max-w-3xl mx-auto">
             <p className="text-brand-purple font-semibold uppercase tracking-[0.18em] text-xs sm:text-sm">
               The Puma Approach
@@ -119,7 +181,6 @@ export default function TestimonialsPage() {
           </div>
 
           <div className="mt-10 grid md:grid-cols-3 gap-5">
-
             {[
               {
                 title: "Clear Communication",
@@ -151,7 +212,6 @@ export default function TestimonialsPage() {
                 </p>
               </div>
             ))}
-
           </div>
         </div>
       </section>
@@ -159,9 +219,7 @@ export default function TestimonialsPage() {
       {/* CTA */}
       <section className="bg-white pb-16 lg:pb-20">
         <div className="max-w-7xl mx-auto px-6">
-
           <div className="relative overflow-hidden bg-brand-purple rounded-[2rem] px-7 py-12 sm:px-10 sm:py-14 text-white">
-
             <div className="absolute -right-16 -bottom-20 w-64 h-64 bg-brand-purple-soft/20 rounded-full" />
             <div className="absolute -left-20 -top-24 w-60 h-60 bg-brand-purple-dark/20 rounded-full" />
 
@@ -186,11 +244,9 @@ export default function TestimonialsPage() {
                 Get in Touch
               </Link>
             </div>
-
           </div>
         </div>
       </section>
-
     </div>
   );
 }
