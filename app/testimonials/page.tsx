@@ -31,7 +31,7 @@ export default function TestimonialsPage() {
 
             <p className="mt-6 text-base sm:text-lg text-white/70 max-w-2xl leading-relaxed">
               Good relationships matter. Here&apos;s what people we've worked with have to say
-              about their experience with from Puma Business Services.
+              about their experience with Puma Business Services.
             </p>
           </div>
         </div>
