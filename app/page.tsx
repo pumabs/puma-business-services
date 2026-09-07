@@ -394,7 +394,7 @@ export default function Home() {
 
             <div>
               <p className="text-brand-purple font-semibold uppercase tracking-[0.18em] text-xs sm:text-sm">
-                Client Feedback
+                Feedback
               </p>
 
               <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-brand-purple-dark leading-tight">
@@ -411,7 +411,7 @@ export default function Home() {
                 href="/testimonials"
                 className="inline-flex items-center mt-6 font-semibold text-brand-purple hover:text-brand-purple-dark text-sm"
               >
-                Client testimonials
+                Read our testimonials
                 <span className="ml-2">→</span>
               </Link>
             </div>
