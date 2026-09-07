@@ -19,7 +19,7 @@ export default function TestimonialsPage() {
         <div className="relative max-w-7xl mx-auto px-6 py-16 lg:py-20">
           <div className="max-w-3xl">
             <p className="text-brand-purple-soft font-semibold uppercase tracking-[0.22em] text-xs sm:text-sm">
-              Client Feedback
+              Feedback
             </p>
 
             <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight">
@@ -30,8 +30,8 @@ export default function TestimonialsPage() {
             </h1>
 
             <p className="mt-6 text-base sm:text-lg text-white/70 max-w-2xl leading-relaxed">
-              Good relationships matter. Here&apos;s what one client had to say
-              about the support they received from Puma Business Services.
+              Good relationships matter. Here&apos;s what people we've worked with have to say
+              about their experience with from Puma Business Services.
             </p>
           </div>
         </div>
