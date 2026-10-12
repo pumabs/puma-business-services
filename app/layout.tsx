@@ -101,7 +101,7 @@ const structuredData = {
   name: "Puma Business Services Limited",
   alternateName: "Puma Business Services",
   url: "https://www.puma-bs.co.uk",
-  telephone: "+447891703489",
+  telephone: "+447356015027",
   email: "daniel@puma-bs.co.uk",
   description:
     "Accountancy, tax, bookkeeping, payroll, management reporting and practical business support for businesses and individuals in Buxton, Derbyshire and beyond.",
