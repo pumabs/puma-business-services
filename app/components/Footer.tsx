@@ -115,10 +115,10 @@ export default function Footer() {
                 </a>
 
                 <a
-                  href="tel:07891703489"
+                  href="tel:07356015027"
                   className="block mt-2 text-sm text-white/70 hover:text-white transition-colors"
                 >
-                  07891 703489
+                  07356 015027
                 </a>
               </div>
 
