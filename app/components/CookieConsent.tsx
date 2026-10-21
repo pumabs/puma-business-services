@@ -7,6 +7,7 @@ type ConsentChoice = "accepted" | "rejected" | null;
 
 const CONSENT_KEY = "puma-analytics-consent";
 const MEASUREMENT_ID = "G-0JG24BV3WV";
+const GTM_ID = "GTM-58RSBK2B";
 
 declare global {
   interface Window {
@@ -18,31 +19,64 @@ declare global {
 function loadGoogleAnalytics() {
   if (typeof window === "undefined") return;
 
-  // Always initialise the Google data layer first.
+  // Prevent duplicate loading and configuration.
+  if (document.getElementById("puma-google-analytics")) {
+    return;
+  }
+
   window.dataLayer = window.dataLayer || [];
 
-  // Use Google's expected gtag dataLayer format.
   if (!window.gtag) {
     window.gtag = function () {
       window.dataLayer.push(arguments);
     };
   }
 
-  // Queue the Google Analytics configuration.
   window.gtag("js", new Date());
   window.gtag("config", MEASUREMENT_ID);
-
-  // Do not add the Google script more than once.
-  if (document.getElementById("puma-google-analytics")) {
-    return;
-  }
 
   const script = document.createElement("script");
   script.id = "puma-google-analytics";
   script.async = true;
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${MEASUREMENT_ID}`;
+  script.src =
+    `https://www.googletagmanager.com/gtag/js?id=${MEASUREMENT_ID}`;
 
   document.head.appendChild(script);
+}
+
+function loadGoogleTagManager() {
+  if (typeof window === "undefined") return;
+
+  if (document.getElementById("puma-google-tag-manager")) {
+    return;
+  }
+
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    "gtm.start": Date.now(),
+    event: "gtm.js",
+  });
+
+  const script = document.createElement("script");
+  script.id = "puma-google-tag-manager";
+  script.async = true;
+  script.src =
+    `https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`;
+
+  document.head.appendChild(script);
+}
+
+function loadAnalytics() {
+  loadGoogleAnalytics();
+  loadGoogleTagManager();
+}
+
+function saveConsent(choice: Exclude<ConsentChoice, null>) {
+  try {
+    localStorage.setItem(CONSENT_KEY, choice);
+  } catch {
+    // The current choice still works if browser storage is unavailable.
+  }
 }
 
 export default function CookieConsent() {
@@ -50,11 +84,17 @@ export default function CookieConsent() {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    const savedConsent = localStorage.getItem(CONSENT_KEY);
+    let savedConsent: string | null = null;
+
+    try {
+      savedConsent = localStorage.getItem(CONSENT_KEY);
+    } catch {
+      // Show the banner if browser storage is unavailable.
+    }
 
     if (savedConsent === "accepted") {
       setConsent("accepted");
-      loadGoogleAnalytics();
+      loadAnalytics();
     } else if (savedConsent === "rejected") {
       setConsent("rejected");
     }
@@ -63,13 +103,13 @@ export default function CookieConsent() {
   }, []);
 
   const acceptAnalytics = () => {
-    localStorage.setItem(CONSENT_KEY, "accepted");
+    saveConsent("accepted");
     setConsent("accepted");
-    loadGoogleAnalytics();
+    loadAnalytics();
   };
 
   const rejectAnalytics = () => {
-    localStorage.setItem(CONSENT_KEY, "rejected");
+    saveConsent("rejected");
     setConsent("rejected");
   };
 
@@ -90,9 +130,10 @@ export default function CookieConsent() {
           </h2>
 
           <p className="mt-2 text-sm leading-relaxed text-brand-slate">
-            We use optional analytics cookies to understand how people use our
-            website and help us improve it. We won&apos;t use analytics cookies
-            unless you choose to accept them.{" "}
+            We use optional analytics to understand how people use our
+            website and help us improve it. These tools may use cookies.
+            We won&apos;t load analytics unless you choose to accept
+            them.{" "}
             <Link
               href="/cookies"
               className="font-semibold text-brand-purple underline underline-offset-2 hover:text-brand-purple-dark"
