@@ -55,9 +55,38 @@ const trustPoints = [
   },
 ];
 
+const showEmailNotice = true;
+
 export default function Home() {
   return (
     <div className="flex flex-col flex-1">
+
+      {/* TEMPORARY EMAIL NOTICE */}
+      {showEmailNotice && (
+        <section className="bg-brand-lilac border-b border-brand-purple-soft" aria-label="Temporary email issues">
+          <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div className="text-brand-purple-dark">
+              <p className="font-bold text-sm sm:text-base">
+                Temporary Email Issues
+              </p>
+              <p className="text-sm mt-1">
+                We are currently experiencing issues with our email system.
+                Please contact us via WhatsApp on 07356 015027 in the meantime.
+                We apologise for any inconvenience.
+              </p>
+            </div>
+
+            <a
+              href="https://wa.me/447356015027"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 inline-flex items-center justify-center bg-brand-purple text-white hover:bg-brand-purple-dark transition-colors px-5 py-3 rounded-full font-semibold text-sm"
+            >
+              Message us on WhatsApp
+            </a>
+          </div>
+        </section>
+      )}
 
       {/* HERO */}
       <section className="relative overflow-hidden bg-brand-purple-dark text-white">
