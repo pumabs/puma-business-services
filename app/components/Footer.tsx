@@ -10,12 +10,15 @@ export default function Footer() {
     window.location.reload();
   };
 
+  const socialLinkClass =
+    "flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/20 text-white/70 transition-colors hover:border-white/50 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white";
+
   return (
     <footer className="mt-auto bg-brand-purple-dark text-white">
-      <div className="max-w-7xl mx-auto px-6 py-8">
-        <div className="grid gap-8 md:grid-cols-3 items-start">
+      <div className="mx-auto max-w-7xl px-6 py-8">
+        <div className="grid items-start gap-8 md:grid-cols-3">
           <div>
-            <p className="text-brand-purple-soft font-semibold uppercase tracking-[0.18em] text-xs">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-purple-soft">
               Puma Business Services
             </p>
 
@@ -23,69 +26,69 @@ export default function Footer() {
               Clear financial support.
             </p>
 
-            <p className="mt-2 text-sm text-white/55 max-w-sm leading-relaxed">
+            <p className="mt-2 max-w-sm text-sm leading-relaxed text-white/55">
               Accountancy, tax, reporting and practical business support.
             </p>
           </div>
 
           <div>
-            <p className="text-brand-purple-soft font-semibold uppercase tracking-[0.18em] text-xs">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-purple-soft">
               Explore
             </p>
 
-            <div className="grid grid-cols-2 gap-x-6 gap-y-2 mt-3 text-sm">
+            <div className="mt-3 grid grid-cols-2 gap-x-6 gap-y-2 text-sm">
               <Link
                 href="/"
-                className="text-white/65 hover:text-white transition-colors"
+                className="text-white/65 transition-colors hover:text-white"
               >
                 Home
               </Link>
 
               <Link
                 href="/about"
-                className="text-white/65 hover:text-white transition-colors"
+                className="text-white/65 transition-colors hover:text-white"
               >
                 About Us
               </Link>
 
               <Link
                 href="/services"
-                className="text-white/65 hover:text-white transition-colors"
+                className="text-white/65 transition-colors hover:text-white"
               >
                 Services
               </Link>
 
               <Link
                 href="/testimonials"
-                className="text-white/65 hover:text-white transition-colors"
+                className="text-white/65 transition-colors hover:text-white"
               >
                 Testimonials
               </Link>
 
               <Link
                 href="/updates"
-                className="text-white/65 hover:text-white transition-colors"
+                className="text-white/65 transition-colors hover:text-white"
               >
                 Updates
               </Link>
 
               <Link
                 href="/contact"
-                className="text-white/65 hover:text-white transition-colors"
+                className="text-white/65 transition-colors hover:text-white"
               >
                 Contact
               </Link>
 
               <Link
                 href="/privacy"
-                className="text-white/65 hover:text-white transition-colors"
+                className="text-white/65 transition-colors hover:text-white"
               >
                 Privacy Policy
               </Link>
 
               <Link
                 href="/cookies"
-                className="text-white/65 hover:text-white transition-colors"
+                className="text-white/65 transition-colors hover:text-white"
               >
                 Cookie Policy
               </Link>
@@ -93,7 +96,7 @@ export default function Footer() {
               <button
                 type="button"
                 onClick={reopenCookieSettings}
-                className="text-left text-white/65 hover:text-white transition-colors"
+                className="text-left text-white/65 transition-colors hover:text-white"
               >
                 Cookie Settings
               </button>
@@ -101,34 +104,34 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-brand-purple-soft font-semibold uppercase tracking-[0.18em] text-xs">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-purple-soft">
               Get in Touch
             </p>
 
-            <div className="mt-3 flex flex-col xl:flex-row xl:items-center gap-4 xl:gap-6">
+            <div className="mt-3 flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between xl:gap-5">
               <div className="shrink-0">
                 <a
                   href="mailto:daniel@puma-bs.co.uk"
-                  className="block text-sm text-white/70 hover:text-white transition-colors"
+                  className="block text-sm text-white/70 transition-colors hover:text-white"
                 >
                   daniel@puma-bs.co.uk
                 </a>
 
                 <a
                   href="tel:07356015027"
-                  className="block mt-2 text-sm text-white/70 hover:text-white transition-colors"
+                  className="mt-2 block text-sm text-white/70 transition-colors hover:text-white"
                 >
                   07356 015027
                 </a>
               </div>
 
-              <div className="flex items-center gap-3">
+              <div className="flex flex-wrap items-center gap-3">
                 <a
                   href="https://www.facebook.com/profile.php?id=61578176484448&locale=en_GB"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Puma Business Services on Facebook"
-                  className="flex items-center justify-center w-9 h-9 rounded-full border border-white/20 text-white/70 hover:text-white hover:border-white/50 transition-colors"
+                  className={socialLinkClass}
                 >
                   <svg
                     viewBox="0 0 24 24"
@@ -146,7 +149,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Puma Business Services on LinkedIn"
-                  className="flex items-center justify-center w-9 h-9 rounded-full border border-white/20 text-white/70 hover:text-white hover:border-white/50 transition-colors"
+                  className={socialLinkClass}
                 >
                   <svg
                     viewBox="0 0 24 24"
@@ -159,9 +162,37 @@ export default function Footer() {
                   </svg>
                 </a>
 
+                <a
+                  href="https://www.instagram.com/__puma_bs/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Puma Business Services on Instagram"
+                  className={socialLinkClass}
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="17"
+                    height="17"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    aria-hidden="true"
+                  >
+                    <rect x="3" y="3" width="18" height="18" rx="5" />
+                    <circle cx="12" cy="12" r="4" />
+                    <circle
+                      cx="17.5"
+                      cy="6.5"
+                      r="1"
+                      fill="currentColor"
+                      stroke="none"
+                    />
+                  </svg>
+                </a>
+
                 <Link
                   href="/contact"
-                  className="ml-1 bg-brand-purple hover:bg-brand-purple-mid transition-colors text-white font-semibold px-5 py-2.5 rounded-full text-sm whitespace-nowrap"
+                  className="ml-1 whitespace-nowrap rounded-full bg-brand-purple px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-purple-mid"
                 >
                   Contact Puma
                 </Link>
@@ -172,15 +203,13 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10 bg-[#180d20]">
-        <div className="max-w-7xl mx-auto px-6 py-4 text-xs text-white/40">
-          <div className="flex flex-col lg:flex-row gap-2 lg:justify-between">
+        <div className="mx-auto max-w-7xl px-6 py-4 text-xs text-white/40">
+          <div className="flex flex-col gap-2 lg:flex-row lg:justify-between">
             <p>
               © {year} Puma Business Services Limited. All rights reserved.
             </p>
 
-            <p>
-              Accountancy • Tax • Reporting • Business Support
-            </p>
+            <p>Accountancy • Tax • Reporting • Business Support</p>
           </div>
 
           <p className="mt-3 leading-relaxed">
