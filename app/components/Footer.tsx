@@ -163,7 +163,7 @@ export default function Footer() {
                 </a>
 
                 <a
-                  href="https://www.instagram.com/__puma_bs/"
+                  href="https://www.instagram.com/_puma_bs/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Puma Business Services on Instagram"
