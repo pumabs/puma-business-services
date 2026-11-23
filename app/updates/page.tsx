@@ -178,7 +178,7 @@ export default function UpdatesPage() {
                 </a>
 
                 <a
-                  href="https://www.instagram.com/__puma_bs/"
+                  href="https://www.instagram.com/_puma_bs/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-full border border-brand-purple-soft px-6 py-3 text-sm font-semibold text-brand-purple-dark transition-colors hover:bg-brand-lilac focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple"
