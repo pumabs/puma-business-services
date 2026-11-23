@@ -13,21 +13,21 @@ export default function UpdatesPage() {
     <div>
       {/* HERO */}
       <section className="relative overflow-hidden bg-brand-purple-dark text-white">
-        <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-brand-purple opacity-30" />
-        <div className="absolute -bottom-28 left-1/3 w-72 h-72 rounded-full bg-brand-purple-mid opacity-15 blur-3xl" />
+        <div className="absolute -right-24 -top-24 h-80 w-80 rounded-full bg-brand-purple opacity-30" />
+        <div className="absolute -bottom-28 left-1/3 h-72 w-72 rounded-full bg-brand-purple-mid opacity-15 blur-3xl" />
 
-        <div className="relative max-w-7xl mx-auto px-6 py-16 lg:py-20">
+        <div className="relative mx-auto max-w-7xl px-6 py-16 lg:py-20">
           <div className="max-w-3xl">
-            <p className="text-brand-purple-soft font-semibold uppercase tracking-[0.22em] text-xs sm:text-sm">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-purple-soft sm:text-sm">
               Updates
             </p>
 
-            <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight">
+            <h1 className="mt-4 text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
               Latest from
               <span className="block text-brand-purple-soft">Puma.</span>
             </h1>
 
-            <p className="mt-6 text-base sm:text-lg text-white/70 max-w-2xl leading-relaxed">
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/70 sm:text-lg">
               Business updates, community involvement, sponsorship news and
               useful insights from Puma Business Services.
             </p>
@@ -37,19 +37,19 @@ export default function UpdatesPage() {
 
       {/* INTRO */}
       <section className="bg-brand-cream">
-        <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
-          <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-16 items-start">
+        <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
+          <div className="grid items-start gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
             <div>
-              <p className="text-brand-purple font-semibold uppercase tracking-[0.18em] text-xs sm:text-sm">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-purple sm:text-sm">
                 Puma Updates
               </p>
 
-              <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-brand-purple-dark leading-tight">
+              <h2 className="mt-3 text-3xl font-bold leading-tight text-brand-purple-dark sm:text-4xl">
                 More than just accounting updates.
               </h2>
             </div>
 
-            <div className="space-y-5 text-base sm:text-lg text-brand-slate leading-relaxed">
+            <div className="space-y-5 text-base leading-relaxed text-brand-slate sm:text-lg">
               <p>
                 This is where we share what&apos;s happening at Puma Business
                 Services, from business developments and useful financial
@@ -67,14 +67,14 @@ export default function UpdatesPage() {
       </section>
 
       {/* LATEST UPDATES */}
-      <section className="bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
+      <section className="overflow-hidden bg-white">
+        <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
           <div>
-            <p className="text-brand-purple font-semibold uppercase tracking-[0.18em] text-xs sm:text-sm">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-purple sm:text-sm">
               Latest
             </p>
 
-            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-brand-purple-dark">
+            <h2 className="mt-3 text-3xl font-bold text-brand-purple-dark sm:text-4xl">
               Latest updates.
             </h2>
           </div>
@@ -85,18 +85,18 @@ export default function UpdatesPage() {
 
       {/* WHAT WE SHARE */}
       <section className="bg-brand-lilac">
-        <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
-          <div className="text-center max-w-3xl mx-auto">
-            <p className="text-brand-purple font-semibold uppercase tracking-[0.18em] text-xs sm:text-sm">
+        <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-purple sm:text-sm">
               What You&apos;ll Find Here
             </p>
 
-            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-brand-purple-dark">
+            <h2 className="mt-3 text-3xl font-bold text-brand-purple-dark sm:text-4xl">
               News, insights and life at Puma.
             </h2>
           </div>
 
-          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {[
               [
                 "Business",
@@ -117,15 +117,18 @@ export default function UpdatesPage() {
             ].map(([title, text]) => (
               <div
                 key={title}
-                className="bg-white rounded-2xl p-7 shadow-sm"
+                className="rounded-2xl bg-white p-7 shadow-sm"
               >
-                <div className="w-10 h-10 rounded-2xl bg-brand-purple-soft" />
+                <div
+                  aria-hidden="true"
+                  className="h-10 w-10 rounded-2xl bg-brand-purple-soft"
+                />
 
                 <h3 className="mt-6 text-xl font-bold text-brand-purple-dark">
                   {title}
                 </h3>
 
-                <p className="mt-3 text-brand-slate leading-relaxed text-sm">
+                <p className="mt-3 text-sm leading-relaxed text-brand-slate">
                   {text}
                 </p>
               </div>
@@ -136,22 +139,22 @@ export default function UpdatesPage() {
 
       {/* SOCIAL */}
       <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
-          <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-16 items-center">
+        <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
+          <div className="grid items-center gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
             <div>
-              <p className="text-brand-purple font-semibold uppercase tracking-[0.18em] text-xs sm:text-sm">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-purple sm:text-sm">
                 Follow Puma
               </p>
 
-              <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-brand-purple-dark leading-tight">
+              <h2 className="mt-3 text-3xl font-bold leading-tight text-brand-purple-dark sm:text-4xl">
                 Keep up with Puma on social media.
               </h2>
             </div>
 
             <div>
-              <p className="text-base sm:text-lg text-brand-slate leading-relaxed">
-                You can also follow Puma Business Services on LinkedIn and
-                Facebook for the latest business, community and company
+              <p className="text-base leading-relaxed text-brand-slate sm:text-lg">
+                Follow Puma Business Services on LinkedIn, Facebook and
+                Instagram for the latest business, community and company
                 updates.
               </p>
 
@@ -160,7 +163,7 @@ export default function UpdatesPage() {
                   href="https://www.linkedin.com/company/puma-business-services-ltd/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center bg-brand-purple text-white hover:bg-brand-purple-mid transition-colors px-6 py-3 rounded-full font-semibold text-sm"
+                  className="inline-flex items-center justify-center rounded-full bg-brand-purple px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-purple-mid focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple"
                 >
                   Follow on LinkedIn
                 </a>
@@ -169,9 +172,18 @@ export default function UpdatesPage() {
                   href="https://www.facebook.com/profile.php?id=61578176484448&locale=en_GB"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center border border-brand-purple-soft text-brand-purple-dark hover:bg-brand-lilac transition-colors px-6 py-3 rounded-full font-semibold text-sm"
+                  className="inline-flex items-center justify-center rounded-full border border-brand-purple-soft px-6 py-3 text-sm font-semibold text-brand-purple-dark transition-colors hover:bg-brand-lilac focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple"
                 >
                   Follow on Facebook
+                </a>
+
+                <a
+                  href="https://www.instagram.com/__puma_bs/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-full border border-brand-purple-soft px-6 py-3 text-sm font-semibold text-brand-purple-dark transition-colors hover:bg-brand-lilac focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple"
+                >
+                  Follow on Instagram
                 </a>
               </div>
             </div>
@@ -181,28 +193,28 @@ export default function UpdatesPage() {
 
       {/* CTA */}
       <section className="bg-white pb-16 lg:pb-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="relative overflow-hidden bg-brand-purple rounded-[2rem] px-7 py-12 sm:px-10 sm:py-14 text-white">
-            <div className="absolute -right-16 -bottom-20 w-64 h-64 bg-brand-purple-soft/20 rounded-full" />
-            <div className="absolute -left-20 -top-24 w-60 h-60 bg-brand-purple-dark/20 rounded-full" />
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="relative overflow-hidden rounded-[2rem] bg-brand-purple px-7 py-12 text-white sm:px-10 sm:py-14">
+            <div className="absolute -bottom-20 -right-16 h-64 w-64 rounded-full bg-brand-purple-soft/20" />
+            <div className="absolute -left-20 -top-24 h-60 w-60 rounded-full bg-brand-purple-dark/20" />
 
             <div className="relative max-w-3xl">
-              <p className="text-brand-purple-soft uppercase tracking-[0.18em] font-semibold text-xs sm:text-sm">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-purple-soft sm:text-sm">
                 Let&apos;s Talk
               </p>
 
-              <h2 className="mt-3 text-3xl sm:text-4xl font-bold leading-tight">
+              <h2 className="mt-3 text-3xl font-bold leading-tight sm:text-4xl">
                 Looking for more from your accountant?
               </h2>
 
-              <p className="mt-4 text-base sm:text-lg text-white/75 max-w-2xl leading-relaxed">
+              <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/75 sm:text-lg">
                 If you&apos;d like to find out more about Puma and how we could
                 support your business, get in touch for a conversation.
               </p>
 
               <Link
                 href="/contact"
-                className="inline-block mt-6 bg-white text-brand-purple-dark hover:bg-brand-purple-soft transition-colors px-6 py-3 rounded-full font-semibold text-sm"
+                className="mt-6 inline-block rounded-full bg-white px-6 py-3 text-sm font-semibold text-brand-purple-dark transition-colors hover:bg-brand-purple-soft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
                 Get in Touch
               </Link>
